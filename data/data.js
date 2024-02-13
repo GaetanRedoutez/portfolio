@@ -1,13 +1,18 @@
-const skill = {
-  HTML: 'HTML',
-  CSS: 'CSS',
-  JS: 'JavaScript',
-  REACT: 'React',
-  NODE: 'Node.JS',
-  EXPRESS: 'Express',
-  PHP: 'PHP',
-  BS: 'Bootstrap',
-  SWAGGER: 'Swagger'
+export const skill = {
+  HTML: { name: 'HTML', state: 'Acquis' },
+  CSS: { name: 'CSS', state: 'Acquis' },
+  SASS: { name: 'SASS', state: 'Acquis' },
+  JS: { name: 'JavaScript', state: 'Acquis' },
+  REACT: { name: 'React', state: 'Acquis' },
+  NODE: { name: 'NodeJS', state: 'Acquis' },
+  EXPRESS: { name: 'Express', state: 'Acquis' },
+  MONGODB: { name: 'MongoDB', state: 'Acquis' },
+  SWAGGER: { name: 'Swagger', state: 'Acquis' },
+  BS: { name: 'Bootstrap', state: 'En cours' },
+  PHP: { name: 'PHP', state: 'En cours' },
+  SQL: { name: 'SQL', state: 'En cours' },
+  ANGULAR: { name: 'Angular', state: 'Prévu' },
+  SYMFONY: { name: 'Symfony', state: 'Prévu' }
 }
 
 export const projectData = [
@@ -75,7 +80,7 @@ export const projectData = [
     image: 'projectimage.png',
     demo: false,
     link: '',
-    skills: [skill.NODE, skill.EXPRESS, skill.SWAGGER],
+    skills: [skill.NODE, skill.EXPRESS, skill.MONGODB, skill.SWAGGER],
     description: "Développez le back-end d'un site de notation de livres"
   },
   {
@@ -86,7 +91,7 @@ export const projectData = [
     image: 'projectimage.png',
     demo: true,
     link: '/',
-    skills: [skill.REACT, skill.NODE, skill.EXPRESS, skill.BS],
+    skills: [skill.REACT, skill.NODE, skill.EXPRESS, skill.MONGODB, skill.BS],
     description: 'Vous y êtes !'
   },
   {
@@ -97,7 +102,7 @@ export const projectData = [
     image: 'projectimage.png',
     demo: false,
     link: '',
-    skills: [skill.REACT, skill.NODE, skill.EXPRESS, skill.BS],
+    skills: [skill.REACT, skill.NODE, skill.EXPRESS, skill.MONGODB, skill.BS],
     description: 'Site de vente de pizza | FullStack JS'
   },
   {
@@ -108,7 +113,7 @@ export const projectData = [
     image: 'projectimage.png',
     demo: false,
     link: '',
-    skills: [skill.PHP],
+    skills: [skill.PHP, skill.SQL],
     description: 'Site achat/vente objet en PHP | V1 : MVC | V2 : POO en cours'
   }
 ]

@@ -8551,10 +8551,21 @@ ul {
   cursor: pointer;
 }
 
+.skill-icon {
+  width: 55px;
+  height: 55px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 .visible {
   visibility: visible;
 }
 
 .hidden {
   visibility: hidden;
+}
+
+.justify {
+  text-align: justify;
 }/*# sourceMappingURL=main.css.map */

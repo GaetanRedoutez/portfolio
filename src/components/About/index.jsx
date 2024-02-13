@@ -5,7 +5,7 @@ function About() {
         <div>
           <img src="src\assets\images\photoprofil.png" width={351} alt="" />
         </div>
-        <div className="fs-4 mx-4">
+        <div className="fs-4 mx-4 justify">
           Développeur Web junior en fin de formation suite à une reconversion,
           je suis passionné par ce milieu et je recherche activement une
           entreprise dynamique, ou des projets qui me permettront de mettre en
