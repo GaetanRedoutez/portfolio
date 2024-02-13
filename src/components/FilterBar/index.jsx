@@ -1,40 +1,81 @@
-import { useState } from 'react'
+import PropTypes from 'prop-types'
+import { useEffect, useState } from 'react'
 
-function FilterBar({ data, updateData, filterList, filter }) {
-  const [activFilter, setActivFilter] = useState([])
-
-  console.log(data[0].skills[0].name)
-
+/**
+ * @param {Object} props
+ * @param {string} props.data
+ * @param {Object} props.updateData
+ * @param {string} props.filterList
+ * @returns {JSX.Element}
+ */
+function FilterBar({ activFilter, setActivFilter, filterList }) {
   const handleChange = (e) => {
-    const updatedFilter = [...activFilter, e.target.value]
-    setActivFilter(updatedFilter)
+    const filterValue = e.target.value
+
+    setActivFilter((prevFilter) => {
+      if (!prevFilter.includes(filterValue)) {
+        return [...activFilter, filterValue]
+      }
+    })
+  }
+
+  const handleClearOne = (e) => {
+    const filterToClear = e.target.value
+    const index = activFilter.indexOf(filterToClear)
+    if (index > -1) {
+      let updatedFilter = [...activFilter]
+      updatedFilter.splice(index, 1)
+      setActivFilter(updatedFilter)
+    }
   }
 
   const handleReset = () => {
     setActivFilter([])
   }
 
+  const gridMaxCol = {
+    '--bs-columns': '6'
+  }
+
   return (
     <>
-      <div>
-        Filtrez les projets par compétences :{' '}
-        <select onChange={handleChange}>
-          <option value="">Tous</option>
-          {filterList.map((value, key) => (
-            <option key={Date.now + key} value={value}>
-              {value}
-            </option>
-          ))}
-        </select>
-      </div>
-      <div>
-        {activFilter.map((value, key) => (
-          <span key={Date.now() + key}>{value}</span>
+      {/* <div className=" g-col-5"> */}
+      <select onChange={handleChange} value="" className="form-select g-col-3">
+        <option value="" disabled>
+          Selectionner un filtre
+        </option>
+        {filterList.map((value, key) => (
+          <option key={Date.now() + key} value={value}>
+            {value}
+          </option>
         ))}
+      </select>
+      {/* </div> */}
+      <button className="g-col-1" onClick={handleReset}>
+        Reset filter
+      </button>
+      <div className="g-col-8">
+        <div className="grid text-center" style={gridMaxCol}>
+          {activFilter.map((value, key) => (
+            <button
+              className="g-col-1 btn btn-secondary text-light"
+              key={Date.now() + key}
+              onClick={handleClearOne}
+              value={value}
+            >
+              {value} ×
+            </button>
+          ))}
+        </div>
       </div>
-      <button onClick={handleReset}>Reset filter</button>
     </>
   )
 }
 
 export default FilterBar
+
+FilterBar.propTypes = {
+  activFilter: PropTypes.array.isRequired,
+  setActivFilter: PropTypes.func.isRequired,
+  filterList: PropTypes.array.isRequired
+}

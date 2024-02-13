@@ -4,31 +4,32 @@ import FilterBar from '../../components/FilterBar'
 import Project from '../../components/Project'
 
 function Projects() {
-  const [data, updateData] = useState([])
+  const [activFilter, setActivFilter] = useState([])
 
   const skillArray = Object.entries(skill)
-  let skillNames = []
 
-  skillArray.forEach((element) => {
-    const names = [element[1]['name']]
-    skillNames.push(names.join())
+  const skillNames = skillArray.map((element) => element[1].name)
+
+  const filteredProject = Object.entries(projectData).filter((element) => {
+    const projectSkills = element[1].skills.map((skill) => skill.name)
+    return activFilter.every((filter) => projectSkills.includes(filter))
   })
-  console.log(projectData.skills)
+
   return (
-    <>
-      <div className="container my-5">
+    <div className="container">
+      <div className="grid my-5">
         <FilterBar
-          data={projectData}
-          updateData={updateData}
           filterList={skillNames}
+          activFilter={activFilter}
+          setActivFilter={setActivFilter}
         />
-        <div className="grid">
-          {data.map((data) => (
-            <Project key={data.id} projectData={data} />
-          ))}
-        </div>
       </div>
-    </>
+      <div className="grid">
+        {filteredProject.map((data) => (
+          <Project key={Date.now() + data[1].id} projectData={data[1]} />
+        ))}
+      </div>
+    </div>
   )
 }
 
