@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types'
-import { useEffect, useState } from 'react'
 
 /**
  * @param {Object} props
@@ -18,7 +17,7 @@ function FilterBar({ activFilter, setActivFilter, filterList }) {
       }
     })
   }
-
+  //FIXME Disable l'option si elle a déjà été selectionné
   const handleClearOne = (e) => {
     const filterToClear = e.target.value
     const index = activFilter.indexOf(filterToClear)
