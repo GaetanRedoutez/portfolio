@@ -2,7 +2,7 @@ function Header() {
   return (
     <header className="bg-body-tertiary">
       <div className="container d-flex flex-row justify-content-between p-2">
-        <div>
+        <a href="/">
           <img
             src="src\assets\images\logo\logo.png"
             alt="Logo Gaetan Redoutez"
@@ -11,7 +11,7 @@ function Header() {
           <span className="mx-2">
             <span className="h5">Gaëtan Redoutez</span>
           </span>
-        </div>
+        </a>
         <nav className="navbar navbar-expand-lg ">
           <div className="container">
             <div className="navbar-nav">

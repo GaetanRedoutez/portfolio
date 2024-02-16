@@ -1,18 +1,18 @@
 export const skill = {
-  HTML: { name: 'HTML', state: 'Acquis' },
-  CSS: { name: 'CSS', state: 'Acquis' },
-  SASS: { name: 'SASS', state: 'Acquis' },
-  JS: { name: 'JavaScript', state: 'Acquis' },
-  REACT: { name: 'React', state: 'Acquis' },
-  NODE: { name: 'NodeJS', state: 'Acquis' },
-  EXPRESS: { name: 'Express', state: 'Acquis' },
-  MONGODB: { name: 'MongoDB', state: 'Acquis' },
-  SWAGGER: { name: 'Swagger', state: 'Acquis' },
-  BS: { name: 'Bootstrap', state: 'En cours' },
-  PHP: { name: 'PHP', state: 'En cours' },
-  SQL: { name: 'SQL', state: 'En cours' },
-  ANGULAR: { name: 'Angular', state: 'Prévu' },
-  SYMFONY: { name: 'Symfony', state: 'Prévu' }
+  HTML: { name: 'HTML', state: 'Acquis', showFilter: true },
+  CSS: { name: 'CSS', state: 'Acquis', showFilter: false },
+  SASS: { name: 'SASS', state: 'Acquis', showFilter: true },
+  JS: { name: 'JavaScript', state: 'Acquis', showFilter: true },
+  REACT: { name: 'React', state: 'Acquis', showFilter: true },
+  NODE: { name: 'NodeJS', state: 'Acquis', showFilter: true },
+  EXPRESS: { name: 'Express', state: 'Acquis', showFilter: false },
+  MONGODB: { name: 'MongoDB', state: 'Acquis', showFilter: true },
+  SWAGGER: { name: 'Swagger', state: 'Acquis', showFilter: true },
+  BS: { name: 'Bootstrap', state: 'En cours', showFilter: true },
+  PHP: { name: 'PHP', state: 'En cours', showFilter: true },
+  SQL: { name: 'SQL', state: 'En cours', showFilter: true },
+  ANGULAR: { name: 'Angular', state: 'Prévu', showFilter: false },
+  SYMFONY: { name: 'Symfony', state: 'Prévu', showFilter: false }
 }
 
 export const projectData = [

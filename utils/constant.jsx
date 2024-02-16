@@ -1,7 +1,7 @@
 import Cv from '../src/pages/CV'
 import Error from '../src/pages/Error'
 import Home from '../src/pages/Home'
-import Projects from '../src/pages/Projects'
+import ProjectsPage from '../src/pages/Projects'
 
 export const APP_ROUTES = [
   {
@@ -10,7 +10,7 @@ export const APP_ROUTES = [
   },
   {
     path: '/projects',
-    element: <Projects />
+    element: <ProjectsPage />
   },
   {
     path: '/cv',

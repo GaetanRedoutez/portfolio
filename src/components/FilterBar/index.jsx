@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
 /**
  * @param {Object} props
@@ -9,65 +9,40 @@ import { useEffect } from 'react'
  * @returns {JSX.Element}
  */
 function FilterBar({ activFilter, setActivFilter, filterList }) {
-  //FIXME Disable l'option si elle a déjà été selectionné
-  const handleChange = (e) => {
+  // const [isSelected, setIsSelected] = useState(false)
+
+  const gridMaxCol = {
+    '--bs-columns': `${filterList.length}`
+  }
+
+  const handleClick = (e) => {
     const filterValue = e.target.value
     if (!activFilter.includes(filterValue)) {
       setActivFilter([...activFilter, filterValue])
+      // setIsSelected(true)
+    } else {
+      setActivFilter([
+        ...activFilter.filter((element) => element !== filterValue)
+      ])
+      // setIsSelected(false)
     }
-  }
-  const handleClearOne = (e) => {
-    const filterToClear = e.target.value
-    const index = activFilter.indexOf(filterToClear)
-    if (index > -1) {
-      let updatedFilter = [...activFilter]
-      updatedFilter.splice(index, 1)
-      setActivFilter(updatedFilter)
-    }
-  }
-
-  useEffect(() => {
-    console.log(activFilter)
-  }, [activFilter])
-
-  const handleReset = () => {
-    setActivFilter([])
-  }
-
-  const gridMaxCol = {
-    '--bs-columns': '6'
   }
 
   return (
     <>
-      {/* <div className=" g-col-5"> */}
-      <select onChange={handleChange} value="" className="form-select g-col-3">
-        <option value="" disabled>
-          Selectionner un filtre
-        </option>
+      <div className="grid text-center my-5 mx-5" style={gridMaxCol}>
         {filterList.map((value, key) => (
-          <option key={Date.now() + key} value={value}>
+          <button
+            className={`g-col-1 btn ${
+              activFilter.includes(value) ? 'btn-primary' : 'btn-secondary'
+            }`}
+            key={Date.now() + key}
+            value={value}
+            onClick={handleClick}
+          >
             {value}
-          </option>
+          </button>
         ))}
-      </select>
-      {/* </div> */}
-      <button className="g-col-1" onClick={handleReset}>
-        Reset filter
-      </button>
-      <div className="g-col-8">
-        <div className="grid text-center" style={gridMaxCol}>
-          {activFilter.map((value, key) => (
-            <button
-              className="g-col-1 btn btn-secondary text-light"
-              key={Date.now() + key}
-              onClick={handleClearOne}
-              value={value}
-            >
-              {value} ×
-            </button>
-          ))}
-        </div>
       </div>
     </>
   )

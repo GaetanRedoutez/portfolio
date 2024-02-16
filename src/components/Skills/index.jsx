@@ -19,8 +19,10 @@ function Skills({ title, skill, state }) {
   const extension = '.png'
 
   return (
-    <div className="container">
-      <h2 className="my-4">{title}</h2>
+    <div className="container ">
+      <h2 className="my-4 d-flex justify-content-center align-items-center">
+        {title}
+      </h2>
       <div className="grid">
         {filteredSkill.map(([key, value]) => (
           <div
