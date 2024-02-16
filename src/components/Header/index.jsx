@@ -8,7 +8,9 @@ function Header() {
             alt="Logo Gaetan Redoutez"
             width={55}
           />
-          <span className="mx-2">Gaëtan REDOUTEZ</span>
+          <span className="mx-2">
+            <span className="h5">Gaëtan Redoutez</span>
+          </span>
         </div>
         <nav className="navbar navbar-expand-lg ">
           <div className="container">

@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types'
+import { useEffect } from 'react'
 
 /**
  * @param {Object} props
@@ -8,16 +9,13 @@ import PropTypes from 'prop-types'
  * @returns {JSX.Element}
  */
 function FilterBar({ activFilter, setActivFilter, filterList }) {
+  //FIXME Disable l'option si elle a déjà été selectionné
   const handleChange = (e) => {
     const filterValue = e.target.value
-
-    setActivFilter((prevFilter) => {
-      if (!prevFilter.includes(filterValue)) {
-        return [...activFilter, filterValue]
-      }
-    })
+    if (!activFilter.includes(filterValue)) {
+      setActivFilter([...activFilter, filterValue])
+    }
   }
-  //FIXME Disable l'option si elle a déjà été selectionné
   const handleClearOne = (e) => {
     const filterToClear = e.target.value
     const index = activFilter.indexOf(filterToClear)
@@ -27,6 +25,10 @@ function FilterBar({ activFilter, setActivFilter, filterList }) {
       setActivFilter(updatedFilter)
     }
   }
+
+  useEffect(() => {
+    console.log(activFilter)
+  }, [activFilter])
 
   const handleReset = () => {
     setActivFilter([])
