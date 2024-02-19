@@ -34,15 +34,16 @@ function Header() {
         ref={headerRef}
       >
         <div className="container d-flex flex-row justify-content-between p-2">
-          <a href="/">
+          <a
+            href="/"
+            className=" nav-link active d-flex flex-row justify-content-between align-items-center"
+          >
             <img
               src="src\assets\images\logo\logo.png"
               alt="Logo Gaetan Redoutez"
               width={55}
             />
-            <span className="mx-2">
-              <span className="h5">Gaëtan Redoutez</span>
-            </span>
+            <h1 className="h5 m-0 mx-2 ">Gaëtan Redoutez</h1>
           </a>
           <nav className="navbar navbar-expand-lg ">
             <div className="container">

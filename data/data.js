@@ -21,10 +21,10 @@ export const projectData = [
     base: 'Student',
     type: 'Programmation',
     name: 'Booki',
-    image: 'projectimage.png',
+    image: 'booki.png',
     demo: true,
     link: 'https://booki-gredoutez.vercel.app/',
-    github: '',
+    github: 'https://github.com/GaetanRedoutez/P2-HTML-CSS-OPC',
     skills: [skill.HTML, skill.CSS],
     description:
       "Créez la page d'accueil d'une agence de voyage avec HTML & CSS"
@@ -35,9 +35,10 @@ export const projectData = [
     type: 'Programmation',
     name: 'Porfolio Sophie Bluel',
     image: 'projectimage.png',
-    demo: true,
+    demo: false,
     link: '',
-    github: '',
+    github:
+      'https://github.com/GaetanRedoutez/Portfolio-architecte-sophie-bluel',
     skills: [skill.JS],
     description: 'Créez une page web dynamique avec JavaScript'
   },
@@ -61,8 +62,8 @@ export const projectData = [
     image: 'projectimage.png',
     demo: true,
     link: 'https://nina-carducci-gredoutez.vercel.app/',
-    github: '',
-    skills: [skill.HTML, skill.CSS, skill.JS],
+    github: 'https://github.com/GaetanRedoutez/P5-OPC-Nina-Carducci',
+    skills: [skill.HTML, skill.CSS, skill.JS, skill.SASS],
     description: 'Débuggez et optimisez un site de photographe'
   },
   {
@@ -73,8 +74,8 @@ export const projectData = [
     image: 'projectimage.png',
     demo: true,
     link: 'https://kasa-gredoutez.vercel.app/',
-    github: '',
-    skills: [skill.REACT],
+    github: 'https://github.com/GaetanRedoutez/kasa',
+    skills: [skill.REACT, skill.SASS],
     description: 'Créez une application web de location immobilière avec React'
   },
   {
@@ -85,8 +86,14 @@ export const projectData = [
     image: 'projectimage.png',
     demo: false,
     link: '',
-    github: '',
-    skills: [skill.NODE, skill.EXPRESS, skill.MONGODB, skill.SWAGGER],
+    github: 'https://github.com/GaetanRedoutez/mon-vieux-grimoire',
+    skills: [
+      skill.NODE,
+      skill.EXPRESS,
+      skill.MONGODB,
+      skill.SWAGGER,
+      skill.SASS
+    ],
     description: "Développez le back-end d'un site de notation de livres"
   },
   {
@@ -98,7 +105,14 @@ export const projectData = [
     demo: true,
     link: '/',
     github: '',
-    skills: [skill.REACT, skill.NODE, skill.EXPRESS, skill.MONGODB, skill.BS],
+    skills: [
+      skill.REACT,
+      skill.NODE,
+      skill.EXPRESS,
+      skill.MONGODB,
+      skill.BS,
+      skill.SASS
+    ],
     description: 'Vous y êtes !'
   },
   {
@@ -109,7 +123,7 @@ export const projectData = [
     image: 'projectimage.png',
     demo: false,
     link: '',
-    github: '',
+    github: 'https://github.com/GaetanRedoutez/portfolio',
     skills: [skill.REACT, skill.NODE, skill.EXPRESS, skill.MONGODB, skill.BS],
     description: 'Site de vente de pizza | FullStack JS'
   },
@@ -121,7 +135,7 @@ export const projectData = [
     image: 'projectimage.png',
     demo: false,
     link: '',
-    github: '',
+    github: 'https://github.com/GaetanRedoutez/training-php',
     skills: [skill.PHP, skill.SQL],
     description: 'Site achat/vente objet en PHP | V1 : MVC | V2 : POO en cours'
   }

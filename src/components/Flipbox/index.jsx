@@ -10,12 +10,15 @@ function Flipbox({ projectData, shouldFade }) {
 
   const imageUrl = `src/assets/images/project/${projectData.image}`
   const background = {
-    backgroundImage: `url(${imageUrl})`
+    backgroundImage: `url(${imageUrl})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center'
   }
 
   const fullClassName = `g-col-6 g-col-md-4 p-3 text-center ${
     shouldFade ? 'fadeOut' : 'fadeIn'
   }`
+
   console.log(projectData.name, ' ', shouldFade)
   return (
     <div className={fullClassName}>
@@ -33,23 +36,30 @@ function Flipbox({ projectData, shouldFade }) {
               <div className="flipbox-inner--back_content__text">
                 <h2 className="h5">{projectData.description}</h2>
                 <div>
-                  <a
-                    href="http://github.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img
-                      src="src/assets/images/icons/icons8-github.png"
-                      alt="Github Link"
-                    />
-                  </a>
-                  <a
-                    href="http://google.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img src="src/assets/images/icons/web.png" alt="Web Link" />
-                  </a>
+                  {projectData.github !== '' ? (
+                    <a
+                      href={projectData.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img
+                        src="src/assets/images/icons/icons8-github.png"
+                        alt="Github Link"
+                      />
+                    </a>
+                  ) : null}
+                  {projectData.link !== '' ? (
+                    <a
+                      href={projectData.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img
+                        src="src/assets/images/icons/web.png"
+                        alt="Web Link"
+                      />
+                    </a>
+                  ) : null}
                 </div>
               </div>
             </div>
