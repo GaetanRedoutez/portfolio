@@ -19,14 +19,14 @@ function Skills({ title, skill, state }) {
   const extension = '.png'
 
   return (
-    <div className="container ">
-      <h2 className="my-4 d-flex justify-content-center align-items-center">
+    <div className="container">
+      <h2 className="mt-5 d-flex justify-content-center align-items-center">
         {title}
       </h2>
-      <div className="grid">
+      <div className="skillgrid">
         {filteredSkill.map(([key, value]) => (
           <div
-            className="g-col-1 d-flex align-items-center justify-content-center mb-2 skill"
+            className="skillgrid-item"
             data-tooltip-id="my-tooltip"
             data-tooltip-content={value.name}
             key={Date.now() + key}
@@ -34,7 +34,7 @@ function Skills({ title, skill, state }) {
             <img
               src={`${pathToImage}${value.name}${extension}`}
               alt=""
-              className="skill-icon"
+              className="skillgrid-item--icon"
             />
             <Tooltip id="my-tooltip" />
           </div>

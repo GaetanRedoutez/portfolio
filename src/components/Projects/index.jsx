@@ -1,35 +1,47 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { projectData, skill } from '../../../data/data'
 import Flipbox from '../Flipbox/index.jsx'
 import FilterBar from '../FilterBar/index.jsx'
 
 function Projects() {
   const [activFilter, setActivFilter] = useState([])
+  const [projects, setProjects] = useState([])
 
-  const skillArray = Object.entries(skill)
-
-  const skillNames = skillArray.map((element) =>
-    element[1].showFilter ? element[1].name : null
-  )
-
-  const skillFilter = skillNames.filter((element) => element !== null)
-
-  const filteredProject = Object.entries(projectData).filter((element) => {
-    const projectSkills = element[1].skills.map((skill) => skill.name)
-    return activFilter.every((filter) => projectSkills.includes(filter))
-  })
+  useEffect(() => {
+    const filteredProject = Object.entries(projectData).filter((element) => {
+      if (activFilter.length === 0) return true
+      const projectSkills = element[1].skills.map((skill) => skill.name)
+      return activFilter.every((filter) => projectSkills.includes(filter))
+    })
+    setTimeout(() => {
+      setProjects(filteredProject)
+    }, 800)
+  }, [activFilter])
 
   return (
-    <div className="container">
-      <FilterBar
-        filterList={skillFilter}
-        activFilter={activFilter}
-        setActivFilter={setActivFilter}
-      />
-      <div className="grid">
-        {filteredProject.map((data) => (
-          <Flipbox key={Date.now() + data[1].id} projectData={data[1]} />
-        ))}
+    <div className="py-5" id="projects">
+      <div className="container">
+        <FilterBar
+          filterList={Object.values(skill)
+            .filter((s) => s.showFilter)
+            .map((s) => s.name)}
+          activFilter={activFilter}
+          setActivFilter={setActivFilter}
+        />
+        <div className="grid">
+          {projects.map((data) => (
+            <Flipbox
+              key={Date.now() + data[1].id}
+              projectData={data[1]}
+              shouldFade={
+                activFilter.length > 0 &&
+                !data[1].skills.some((skill) =>
+                  activFilter.includes(skill.name)
+                )
+              }
+            />
+          ))}
+        </div>
       </div>
     </div>
   )

@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types'
-import { useEffect, useState } from 'react'
 
 /**
  * @param {Object} props
@@ -9,8 +8,6 @@ import { useEffect, useState } from 'react'
  * @returns {JSX.Element}
  */
 function FilterBar({ activFilter, setActivFilter, filterList }) {
-  // const [isSelected, setIsSelected] = useState(false)
-
   const gridMaxCol = {
     '--bs-columns': `${filterList.length}`
   }
@@ -19,12 +16,10 @@ function FilterBar({ activFilter, setActivFilter, filterList }) {
     const filterValue = e.target.value
     if (!activFilter.includes(filterValue)) {
       setActivFilter([...activFilter, filterValue])
-      // setIsSelected(true)
     } else {
       setActivFilter([
         ...activFilter.filter((element) => element !== filterValue)
       ])
-      // setIsSelected(false)
     }
   }
 

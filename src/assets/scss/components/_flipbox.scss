@@ -1,5 +1,5 @@
 .flipbox {
-  min-height: 180px;
+  min-height: 200px;
   perspective: 1000px;
   // box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
@@ -17,7 +17,7 @@
       position: absolute;
       backface-visibility: hidden;
       &_content {
-        height: 180px;
+        height: 200px;
         border-radius: 25px;
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
       }
@@ -30,18 +30,36 @@
     }
 
     &--back {
-      h2 {
-        background-color: rgba(0, 0, 0, 0.5);
-        color: white;
-        height: 100%;
-        border-radius: 25px;
-      }
-      // color: white;
+      color: white;
       transform: rotateX(180deg);
+      &_content {
+        &__text {
+          background-color: rgba(0, 0, 0, 0.5);
+          height: 200px;
+          border-radius: 25px;
+          padding: 1rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+        }
+      }
     }
   }
 
   &:hover .flipbox-inner {
     transform: rotateX(180deg);
+  }
+}
+
+.fadeOut {
+  animation: fadeOutAnimation 0.8s ease forwards;
+}
+
+@keyframes fadeOutAnimation {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
