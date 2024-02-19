@@ -2,6 +2,7 @@ import PropTypes from 'prop-types'
 import { Tooltip } from 'react-tooltip'
 
 /**
+ *
  * @param {Object} props
  * @param {string} props.title - Skills title.
  * @param {Object} props.skill - Skills from data or database.
