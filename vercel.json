@@ -1,5 +1,3 @@
 {
-  "build": {
-    "include": ["src/assets/images/**/*"]
-  }
+  "public": true
 }

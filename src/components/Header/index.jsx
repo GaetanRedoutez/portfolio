@@ -28,7 +28,6 @@ function Header() {
 
   return (
     <>
-      {/* <img src="src\assets\images\Group 7.png" alt="" /> */}
       <header
         className={`bg-body-tertiary navbar ${sticky.isSticky ? 'sticky' : ''}`}
         ref={headerRef}
@@ -39,7 +38,7 @@ function Header() {
             className=" nav-link active d-flex flex-row justify-content-between align-items-center"
           >
             <img
-              src="src\assets\images\logo\logo.png"
+              src="assets\images\logo\logo.png"
               alt="Logo Gaetan Redoutez"
               width={55}
             />

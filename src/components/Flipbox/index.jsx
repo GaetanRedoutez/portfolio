@@ -8,7 +8,7 @@ function Flipbox({ projectData, shouldFade }) {
     setIsExpanded(!isExpanded)
   }
 
-  const imageUrl = `src/assets/images/project/${projectData.image}`
+  const imageUrl = `/assets/images/project/${projectData.image}`
   const background = {
     backgroundImage: `url(${imageUrl})`,
     backgroundSize: 'cover',
@@ -43,7 +43,7 @@ function Flipbox({ projectData, shouldFade }) {
                       rel="noopener noreferrer"
                     >
                       <img
-                        src="src/assets/images/icons/icons8-github.png"
+                        src="assets/images/icons/icons8-github.png"
                         alt="Github Link"
                       />
                     </a>
@@ -54,10 +54,7 @@ function Flipbox({ projectData, shouldFade }) {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <img
-                        src="src/assets/images/icons/web.png"
-                        alt="Web Link"
-                      />
+                      <img src="assets/images/icons/web.png" alt="Web Link" />
                     </a>
                   ) : null}
                 </div>

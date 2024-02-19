@@ -3,7 +3,7 @@ function About() {
     <>
       <div className="container d-flex flex-row align-items-center mt-5 my-5">
         <div>
-          <img src="src\assets\images\photoprofil.png" width={351} alt="" />
+          <img src="assets\images\photoprofil.png" width={351} alt="" />
         </div>
         <div className="fs-4 mx-4 justify">
           Développeur Web junior en fin de formation suite à une reconversion,

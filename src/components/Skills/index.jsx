@@ -15,7 +15,7 @@ function Skills({ title, skill, state }) {
     (data) => data[1].state === stateToFilter
   )
 
-  const pathToImage = 'src/assets/images/skills/'
+  const pathToImage = 'assets/images/skills/'
   const extension = '.png'
 
   return (
