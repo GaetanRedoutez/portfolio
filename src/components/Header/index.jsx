@@ -50,11 +50,11 @@ function Header() {
                 <a className="nav-link active" aria-current="page" href="/">
                   Accueil
                 </a>
-                <a className="nav-link" href="/#projects">
-                  Projets
-                </a>
                 <a className="nav-link" href="/#skills">
                   Compétences
+                </a>
+                <a className="nav-link" href="/#projects">
+                  Projets
                 </a>
                 <a className="nav-link" href="/#contact">
                   Contact

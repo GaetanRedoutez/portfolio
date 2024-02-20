@@ -6,10 +6,7 @@ function Footer() {
           <ul className="nav col-md-4 justify-content-center align-items-center list-unstyled d-flex">
             <li className="ms-3">
               <a href="mailto:redoutezgaetan@gmail.com">
-                <img
-                  src="src\assets\images\icons\mail-svgrepo-com.png"
-                  alt=""
-                />
+                <img src="assets\images\icons\mail-svgrepo-com.png" alt="" />
               </a>
             </li>
             <li className="ms-3">
@@ -18,7 +15,7 @@ function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img src="src\assets\images\icons\icons8-github.png" alt="" />
+                <img src="assets\images\icons\icons8-github.png" alt="" />
               </a>
             </li>
             <li className="ms-3">
@@ -27,7 +24,7 @@ function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img src="src\assets\images\icons\icons8-linkedin.png" alt="" />
+                <img src="assets\images\icons\icons8-linkedin.png" alt="" />
               </a>
             </li>
           </ul>

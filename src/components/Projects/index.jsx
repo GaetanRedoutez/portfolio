@@ -15,7 +15,7 @@ function Projects() {
     })
     setTimeout(() => {
       setProjects(filteredProject)
-    }, 800)
+    }, 500)
   }, [activFilter])
 
   return (

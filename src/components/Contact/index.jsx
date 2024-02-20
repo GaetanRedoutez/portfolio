@@ -1,9 +1,15 @@
 function Contact() {
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    alert(
+      "Oups, je n'ai pas terminé 😭\n\nEn attendant, envoie-moi un email à redoutezgaetan@gmail.com"
+    )
+  }
   return (
     <div className="bg-body-tertiary py-5" id="contact">
       <div className="container">
         <h2 className="m-3">Contact</h2>
-        <form>
+        <form onSubmit={handleSubmit}>
           <div className="form-group m-3">
             <label htmlFor="email">Adresse email</label>
             <input

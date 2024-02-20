@@ -26,7 +26,7 @@ function Dropdown({ title, content }) {
         <div className="g-col-1"></div>
         <div className="g-col-10 dropdown-collapse">
           <button
-            className="btn dropdown-collapse--btn d-flex align-items-center justify-content-between"
+            className="btn dropdown-collapse--btn d-flex align-items-center justify-content-between btn-light"
             onClick={handleClick}
           >
             <div>{title}</div>
@@ -39,7 +39,7 @@ function Dropdown({ title, content }) {
         </div>
       </div>
       {isShow ? (
-        <div className="grid mt-2 mx-5 dropdown">
+        <div className="grid mt-2 mx-5 dropdown ">
           <div className="g-col-1"></div>
           <div className="g-col-10 dropdown-content justify">{content}</div>
         </div>
