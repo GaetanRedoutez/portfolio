@@ -26,12 +26,12 @@ function Dropdown({ title, content }) {
         <div className="g-col-1"></div>
         <div className="g-col-10 dropdown-collapse">
           <button
-            className="btn btn-primary dropdown-collapse--btn d-flex align-items-center justify-content-between"
+            className="btn dropdown-collapse--btn d-flex align-items-center justify-content-between"
             onClick={handleClick}
           >
             <div>{title}</div>
             <img
-              src="src\assets\images\icons\caret-down.svg"
+              src="assets\images\icons\caret-down.svg"
               alt=""
               style={arrowStyle}
             />

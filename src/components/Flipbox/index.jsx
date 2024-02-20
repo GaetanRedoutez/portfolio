@@ -26,9 +26,9 @@ function Flipbox({ projectData, shouldFade }) {
         <div className="flipbox-inner">
           <div className="flipbox-inner--front">
             <div className="flipbox-inner--front_content" style={background}>
-              <h2 className="d-flex justify-content-center align-items-center">
-                {projectData.name}
-              </h2>
+              <div className="flipbox-inner--front_content__text">
+                <h2>{projectData.name}</h2>
+              </div>
             </div>
           </div>
           <div className="flipbox-inner--back">

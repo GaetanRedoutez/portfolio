@@ -2,28 +2,29 @@ function Contact() {
   return (
     <div className="bg-body-tertiary py-5" id="contact">
       <div className="container">
-        <h2>Contact </h2>
+        <h2 className="m-3">Contact</h2>
         <form>
-          <div className="form-group">
-            <label htmlFor="exampleInputEmail1">Email address</label>
+          <div className="form-group m-3">
+            <label htmlFor="email">Adresse email</label>
             <input
               type="email"
               className="form-control"
-              id="exampleInputEmail1"
-              aria-describedby="emailHelp"
-              placeholder="Enter email"
+              id="email"
+              name="email"
+              placeholder="Votre email"
+              autoComplete="email"
             />
           </div>
-          <div className="form-group">
-            <label htmlFor="exampleInputPassword1">Password</label>
-            <input
-              type="password"
+          <div className="form-group m-3">
+            <label htmlFor="text">Votre message</label>
+            <textarea
               className="form-control"
-              id="exampleInputPassword1"
-              placeholder="Password"
+              id="text"
+              placeholder="Votre message"
+              rows={10}
             />
           </div>
-          <button type="submit" className="btn btn-primary">
+          <button type="submit" className="btn btn-primary m-3">
             Submit
           </button>
         </form>
