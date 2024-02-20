@@ -104,7 +104,7 @@ export const projectData = [
     image: 'portfolio.png',
     demo: true,
     link: '/',
-    github: '',
+    github: 'https://github.com/GaetanRedoutez/portfolio',
     skills: [
       skill.REACT,
       skill.NODE,
