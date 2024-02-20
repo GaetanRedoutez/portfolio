@@ -1,5 +1,5 @@
 export const skill = {
-  HTML: { name: 'Html', state: 'Acquis', showFilter: true },
+  HTML: { name: 'HTML', state: 'Acquis', showFilter: true },
   CSS: { name: 'CSS', state: 'Acquis', showFilter: false },
   SASS: { name: 'SASS', state: 'Acquis', showFilter: true },
   JS: { name: 'JavaScript', state: 'Acquis', showFilter: true },

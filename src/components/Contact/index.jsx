@@ -25,7 +25,7 @@ function Contact() {
             />
           </div>
           <button type="submit" className="btn btn-primary m-3">
-            Submit
+            Envoyer votre message
           </button>
         </form>
       </div>
