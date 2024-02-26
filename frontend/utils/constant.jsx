@@ -17,7 +17,7 @@ export const APP_ROUTES = [
   }
 ]
 
-const BASE_URL = 'http://localhost:4000/api/v1'
+const BASE_URL = 'http://localhost:3000/api/v1'
 
 export const API_ROUTES = {
   GET_SKILLS: `${BASE_URL}/skills`,
