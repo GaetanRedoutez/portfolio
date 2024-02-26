@@ -4,6 +4,7 @@ import About from '../../components/About'
 import Contact from '../../components/Contact'
 import Projects from '../../components/Projects'
 import Skills from '../../components/Skills'
+import Header from '../../components/Header'
 
 function Home() {
   const [skills, setSkills] = useState([])
@@ -32,9 +33,10 @@ function Home() {
   }, [])
 
   return (
-    <>
+    <div id="about">
+      <Header isHome={true} />
       <About />
-      <div className="py-5 bg-body-tertiary" id="skills">
+      <div className="py-5 background-primary" id="skills">
         <Skills
           title={'Compétences acquises'}
           skills={skills}
@@ -49,7 +51,7 @@ function Home() {
       </div>
       <Projects projects={projects} skills={skills} />
       <Contact />
-    </>
+    </div>
   )
 }
 

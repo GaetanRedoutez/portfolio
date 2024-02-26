@@ -2,6 +2,7 @@ import PropTypes from 'prop-types'
 import { useState } from 'react'
 import FilterBar from '../FilterBar/index.jsx'
 import Flipbox from '../Flipbox/index.jsx'
+import Loader from '../Loader/index.jsx'
 
 function Projects({ projects, skills }) {
   const [activFilter, setActivFilter] = useState([])
@@ -9,29 +10,36 @@ function Projects({ projects, skills }) {
   return (
     <div className="py-5" id="projects">
       <div className="container">
-        <FilterBar
-          filterList={skills
-            .filter((data) => data.showFilter)
-            .map((element) => element.name)}
-          activFilter={activFilter}
-          setActivFilter={setActivFilter}
-        />
+        {skills !== undefined ? (
+          <FilterBar
+            filterList={skills
+              .filter((data) => data.showFilter)
+              .map((element) => element.name)}
+            activFilter={activFilter}
+            setActivFilter={setActivFilter}
+          />
+        ) : (
+          <Loader />
+        )}
+        {projects !== undefined ? (
+          <div className="grid">
+            {projects.map((project) => {
+              const isDisplay = project.skills.some((skill) =>
+                activFilter.includes(skill)
+              )
 
-        <div className="grid">
-          {projects.map((project) => {
-            const isDisplay = project.skills.some((skill) =>
-              activFilter.includes(skill)
-            )
-
-            return (
-              <Flipbox
-                key={project._id}
-                projectData={project}
-                display={activFilter.length === 0 ? true : isDisplay}
-              />
-            )
-          })}
-        </div>
+              return (
+                <Flipbox
+                  key={project._id}
+                  projectData={project}
+                  display={activFilter.length === 0 ? true : isDisplay}
+                />
+              )
+            })}
+          </div>
+        ) : (
+          <Loader />
+        )}
       </div>
     </div>
   )

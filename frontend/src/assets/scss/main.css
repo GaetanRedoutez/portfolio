@@ -9393,12 +9393,21 @@ ul {
   list-style-type: none;
 }
 
+.background-primary {
+  background-color: rgba(118, 173, 163, 0.1843137255);
+}
+
 .sticky {
   position: sticky;
   z-index: 10;
   top: 0;
   width: 100%;
   transition: all 0.5s ease;
+}
+
+.active {
+  border-radius: 3px;
+  background-color: #35437e;
 }
 
 .flipbox {
@@ -9419,11 +9428,11 @@ ul {
 }
 .flipbox-inner--front_content, .flipbox-inner--back_content {
   height: 200px;
-  border-radius: 25px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 5px;
 }
 .flipbox-inner--front_content__text {
-  border-radius: 25px;
+  border-radius: 10px;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -9437,7 +9446,7 @@ ul {
 .flipbox-inner--back_content__text {
   background-color: rgba(0, 0, 0, 0.75);
   height: 200px;
-  border-radius: 25px;
+  border-radius: 10px;
   padding: 1rem;
   display: flex;
   flex-direction: column;

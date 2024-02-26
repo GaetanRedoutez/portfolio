@@ -29,7 +29,7 @@ function FilterBar({ activFilter, setActivFilter, filterList }) {
         {filterList.map((value, key) => (
           <button
             className={`g-col-1 btn ${
-              activFilter.includes(value) ? 'btn-primary' : 'btn-light'
+              activFilter.includes(value) ? 'btn-primary' : 'btn-light '
             }`}
             key={Date.now() + key}
             value={value}

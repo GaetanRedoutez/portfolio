@@ -41,7 +41,7 @@ function Dropdown({ title, content }) {
       {isShow ? (
         <div className="grid mt-2 mx-5 dropdown ">
           <div className="g-col-1"></div>
-          <div className="g-col-10 dropdown-content justify">{content}</div>
+          <ul className="g-col-10 dropdown-content justify">{content}</ul>
         </div>
       ) : null}
     </>
@@ -52,5 +52,5 @@ export default Dropdown
 
 Dropdown.propTypes = {
   title: PropTypes.string.isRequired,
-  content: PropTypes.array.isRequired
+  content: PropTypes.array
 }

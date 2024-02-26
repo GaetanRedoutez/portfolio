@@ -4,12 +4,13 @@ function Footer() {
       <div className="container">
         <footer className="d-flex justify-content-between flex-column align-items-center py-3 ">
           <ul className="nav col-md-4 justify-content-center align-items-center list-unstyled d-flex">
-            <li className="ms-3">
+            <li className="mx-5">
               <a href="mailto:redoutezgaetan@gmail.com">
                 <img src="assets\images\icons\mail-svgrepo-com.png" alt="" />
               </a>
             </li>
-            <li className="ms-3">
+
+            <li className="mx-5">
               <a
                 href="https://github.com/GaetanRedoutez"
                 target="_blank"
@@ -18,7 +19,8 @@ function Footer() {
                 <img src="assets\images\icons\icons8-github.png" alt="" />
               </a>
             </li>
-            <li className="ms-3">
+
+            <li className="mx-5">
               <a
                 href="http://www.linkedin.com/in/gaëtan-redoutez-b090a317b"
                 target="_blank"

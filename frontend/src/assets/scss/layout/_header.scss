@@ -5,3 +5,8 @@
   width: 100%;
   transition: all 0.5s ease;
 }
+
+.active {
+  border-radius: 3px;
+  background-color: $primary;
+}

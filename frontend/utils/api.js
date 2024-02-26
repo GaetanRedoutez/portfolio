@@ -30,3 +30,83 @@ export async function getProjects() {
     console.error(error)
   }
 }
+
+/**********   RESUME  ***********/
+
+/**
+ * Retrieve hard skills from database
+ * @returns {Array.Object}
+ */
+export async function getHardSkills() {
+  try {
+    const response = await axios.get(API_ROUTES.GET_HARDSKILLS)
+    return response.data
+  } catch (error) {
+    console.error(error)
+  }
+}
+
+/**
+ * Retrieve experiences from database
+ * @returns {Array.Object}
+ */
+export async function getExperiences() {
+  try {
+    const response = await axios.get(API_ROUTES.GET_EXPERIENCES)
+    return response.data
+  } catch (error) {
+    console.error(error)
+  }
+}
+
+/**
+ * Retrieve formations from database
+ * @returns {Array.Object}
+ */
+export async function getFormations() {
+  try {
+    const response = await axios.get(API_ROUTES.GET_FORMATIONS)
+    return response.data
+  } catch (error) {
+    console.error(error)
+  }
+}
+
+/**
+ * Retrieve languages from database
+ * @returns {Array.Object}
+ */
+export async function getLanguages() {
+  try {
+    const response = await axios.get(API_ROUTES.GET_LANGUAGES)
+    return response.data
+  } catch (error) {
+    console.error(error)
+  }
+}
+
+/**
+ * Retrieve soft skills from database
+ * @returns {Array.Object}
+ */
+export async function getSoftSkills() {
+  try {
+    const response = await axios.get(API_ROUTES.GET_SOFTSKILLS)
+    return response.data
+  } catch (error) {
+    console.error(error)
+  }
+}
+
+/**
+ * Retrieve hobby from database
+ * @returns {Array.Object}
+ */
+export async function getHobbies() {
+  try {
+    const response = await axios.get(API_ROUTES.GET_HOBBIES)
+    return response.data
+  } catch (error) {
+    console.error(error)
+  }
+}

@@ -7,6 +7,7 @@ const path = require('path')
 
 const skillRoute = require('./src/routes/skill')
 const projectRoute = require('./src/routes/project')
+const resumeRoute = require('./src/routes/resume')
 
 const app = express()
 app.use(bodyParser.json())
@@ -45,6 +46,7 @@ app.use((req, res, next) => {
 
 app.use('/api/v1/skills', skillRoute)
 app.use('/api/v1/projects', projectRoute)
+app.use('/api/v1', resumeRoute)
 
 // Serve static images from the 'images' directory
 app.use('/images', express.static(path.join(__dirname, 'public/images')))

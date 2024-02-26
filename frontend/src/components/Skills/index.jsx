@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types'
 import { Tooltip } from 'react-tooltip'
+import Loader from '../Loader'
 
 /**
  *
@@ -20,28 +21,34 @@ function Skills({ title, skills, state }) {
   const extension = '.png'
 
   return (
-    <div className="container">
-      <h2 className="mt-5 d-flex justify-content-center align-items-center">
-        {title}
-      </h2>
-      <div className="skillgrid">
-        {filteredSkill.map((value) => (
-          <div
-            className="skillgrid-item"
-            data-tooltip-id="my-tooltip"
-            data-tooltip-content={value.name}
-            key={Date.now() + value._id}
-          >
-            <img
-              src={`${pathToImage}${value.name}${extension}`}
-              alt=""
-              className="skillgrid-item--icon"
-            />
-            <Tooltip id="my-tooltip" />
+    <>
+      {skills !== undefined ? (
+        <div className="container">
+          <h2 className="mt-5 d-flex justify-content-center align-items-center">
+            {title}
+          </h2>
+          <div className="skillgrid">
+            {filteredSkill.map((value) => (
+              <div
+                className="skillgrid-item"
+                data-tooltip-id="my-tooltip"
+                data-tooltip-content={value.name}
+                key={Date.now() + value._id}
+              >
+                <img
+                  src={`${pathToImage}${value.name}${extension}`}
+                  alt=""
+                  className="skillgrid-item--icon"
+                />
+                <Tooltip id="my-tooltip" />
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
-    </div>
+        </div>
+      ) : (
+        <Loader />
+      )}
+    </>
   )
 }
 

@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
 function Flipbox({ projectData, display }) {
   const [isExpanded, setIsExpanded] = useState(false)
@@ -15,7 +15,6 @@ function Flipbox({ projectData, display }) {
     backgroundPosition: 'center'
   }
 
-  //TODO Il faut que la transition de visible a delete soit smooth. Mais aussi que les projets restant se déplace de manière à faire un belle transition
   const fullClassName = `g-col-6 g-col-md-4 p-3 text-center  ${
     display ? '' : 'display-none move-transition'
   }`
@@ -38,18 +37,21 @@ function Flipbox({ projectData, display }) {
                 <div>
                   {projectData.github !== '' ? (
                     <a
+                      className="mx-3"
                       href={projectData.github}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
                       <img
-                        src="assets/images/icons/icons8-github.png"
+                        src="assets/images/icons/GitHub_Logo_White.png"
                         alt="Github Link"
+                        height={45}
                       />
                     </a>
                   ) : null}
                   {projectData.link !== '' ? (
                     <a
+                      className="mx-3"
                       href={projectData.link}
                       target="_blank"
                       rel="noopener noreferrer"
