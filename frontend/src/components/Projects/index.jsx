@@ -42,11 +42,6 @@ function Projects({ projects, skills }) {
         ) : (
           <Loader />
         )} */}
-
-        <p className="h1">
-          --------------------------------------------------------------------------------
-        </p>
-
         {/* Projets avec les nuances de gris */}
         {projects !== undefined ? (
           <div className="grid">
