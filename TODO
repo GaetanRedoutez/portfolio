@@ -1,7 +1,6 @@
 TODO du projet "Portfolio" | Début du projet le 12/02/2024
 
-✔ Finir de passer les données sur database @done(24-02-27 14:10)
-☐ Ajouter la gestion des images dans la base et les sauvegarder dessus
+
 
 
 Front:
@@ -9,7 +8,9 @@ Front:
   
 
 Back: 
+  ✔ Finir de passer les données sur database @done(25-02-27 14:10)
   ☐ Gestion du formulaire de contact 
+  ☐ Ajouter la gestion des images dans la base et les sauvegarder dessus
   
 Question Mentorat : 
   Linux : 
@@ -17,6 +18,7 @@ Question Mentorat :
     ☐ Configurer https
     ☐ Vérifier la configuration Nginx
     ☐ Sécurité du serveur
+    ☐ Table de routage 
 
 Serveur :
     ☐ Voir pourquoi pas la page resume
