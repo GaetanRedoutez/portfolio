@@ -14,11 +14,18 @@ Back:
   
 Question Mentorat : 
   Linux : 
-    ☐ Expliquez les liens 'ln'
-    ☐ Configurer https
-    ☐ Vérifier la configuration Nginx
-    ☐ Sécurité du serveur
-    ☐ Table de routage 
+    ✔ Expliquez les liens 'ln' @done(24-02-27 15:45)
+    ✔ Configurer https : https://certbot.eff.org/instructions?ws=nginx&os=ubuntufocal @done(24-02-27 15:45)
+    ✔ Vérifier la configuration Nginx @done(24-02-27 15:45)
+    ✔ Sécurité du serveur @done(24-02-27 15:45)
+    ☐ Table de routage : /etc/hosts -> voir capture d'écran
+    ☐ Envoie de mail
 
 Serveur :
     ☐ Voir pourquoi pas la page resume
+
+
+
+
+Mentorat: 
+  ☐ greyscale css pour les nuances de gris sur image
