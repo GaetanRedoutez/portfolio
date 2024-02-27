@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import { useState } from 'react'
 import FilterBar from '../FilterBar/index.jsx'
-import Flipbox from '../Flipbox/index.jsx'
+// import Flipbox from '../Flipbox/index.jsx'
 import Loader from '../Loader/index.jsx'
 import Cards from '../Cards/index.jsx'
 
@@ -23,7 +23,7 @@ function Projects({ projects, skills }) {
           <Loader />
         )}
         {/* Projets avec les flip box */}
-        {projects !== undefined ? (
+        {/* {projects !== undefined ? (
           <div className="grid">
             {projects.map((project) => {
               const isDisplay = project.skills.some((skill) =>
@@ -41,7 +41,7 @@ function Projects({ projects, skills }) {
           </div>
         ) : (
           <Loader />
-        )}
+        )} */}
 
         <p className="h1">
           --------------------------------------------------------------------------------
