@@ -6,7 +6,7 @@ function Contact() {
     )
   }
   return (
-    <div className="background-primary py-5" id="contact">
+    <div className="background-secondary py-5" id="contact">
       <div className="container">
         <h2 className="m-3">Contact</h2>
         <form onSubmit={handleSubmit}>

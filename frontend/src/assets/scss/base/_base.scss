@@ -34,5 +34,13 @@ ul {
 }
 
 .background-primary {
+  background-color: $primary;
+}
+
+.background-secondary {
   background-color: $secondary-opacity;
+}
+
+.background-tertiary {
+  background-color: $tertiary-opacity;
 }

@@ -14,6 +14,9 @@ function Skills({ title, skills, state }) {
   const stateToFilter = state
   let filteredSkill = []
   if (skills !== undefined) {
+    if (state === '') {
+      filteredSkill = skills
+    }
     filteredSkill = skills.filter((data) => data.state === stateToFilter)
   }
 
@@ -24,9 +27,11 @@ function Skills({ title, skills, state }) {
     <>
       {skills !== undefined ? (
         <div className="container">
-          <h2 className="mt-5 d-flex justify-content-center align-items-center">
-            {title}
-          </h2>
+          {title !== '' ? (
+            <h2 className="mt-5 d-flex justify-content-center align-items-center">
+              {title}
+            </h2>
+          ) : null}
           <div className="skillgrid">
             {filteredSkill.map((value) => (
               <div

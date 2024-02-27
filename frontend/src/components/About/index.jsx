@@ -1,7 +1,7 @@
 function About() {
   return (
     <>
-      <div className="container d-flex flex-row align-items-center mt-5 my-5">
+      <div className="container d-flex align-items-center justify-content-center py-5 ">
         <div>
           <img src="assets\images\photoprofil.png" width={351} alt="" />
         </div>

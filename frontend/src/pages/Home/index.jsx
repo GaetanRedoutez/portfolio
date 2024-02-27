@@ -36,7 +36,7 @@ function Home() {
     <div id="about">
       <Header isHome={true} />
       <About />
-      <div className="py-5 background-primary" id="skills">
+      <div className="py-5 background-secondary" id="skills">
         <Skills
           title={'Compétences acquises'}
           skills={skills}

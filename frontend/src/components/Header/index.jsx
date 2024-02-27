@@ -60,7 +60,7 @@ function Header({ isHome }) {
             <div className="container">
               <div className="navbar-nav">
                 <a
-                  className={`nav-link ${
+                  className={`nav-link navbar-brand ${
                     activeLink.includes('/#about') ? 'active text-light' : null
                   }`}
                   href="/#about"
@@ -69,7 +69,7 @@ function Header({ isHome }) {
                   À propos
                 </a>
                 <a
-                  className={`nav-link ${
+                  className={`nav-link navbar-brand ${
                     activeLink.includes('/#skills') ? 'active text-light' : null
                   }`}
                   href="/#skills"
@@ -78,7 +78,7 @@ function Header({ isHome }) {
                   Compétences
                 </a>
                 <a
-                  className={`nav-link ${
+                  className={`nav-link navbar-brand ${
                     activeLink.includes('/#projects')
                       ? 'active text-light'
                       : null
@@ -89,7 +89,7 @@ function Header({ isHome }) {
                   Projets
                 </a>
                 <a
-                  className={`nav-link ${
+                  className={`nav-link navbar-brand ${
                     activeLink.includes('/#contact')
                       ? 'active text-light'
                       : null
@@ -100,9 +100,7 @@ function Header({ isHome }) {
                   Contact
                 </a>
                 <a
-                  className={`nav-link ${
-                    activeLink.includes('/resume') ? 'active text-light' : null
-                  }`}
+                  className={`nav-link navbar-brand `}
                   href="/resume"
                   onClick={handleClick}
                 >

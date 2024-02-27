@@ -1,8 +1,9 @@
 import PropTypes from 'prop-types'
 import { useState } from 'react'
 import FilterBar from '../FilterBar/index.jsx'
-import Flipbox from '../Flipbox/index.jsx'
+// import Flipbox from '../Flipbox/index.jsx'
 import Loader from '../Loader/index.jsx'
+import Cards from '../Cards/index.jsx'
 
 function Projects({ projects, skills }) {
   const [activFilter, setActivFilter] = useState([])
@@ -21,6 +22,7 @@ function Projects({ projects, skills }) {
         ) : (
           <Loader />
         )}
+        {/* Projets avec les flip box
         {projects !== undefined ? (
           <div className="grid">
             {projects.map((project) => {
@@ -30,6 +32,31 @@ function Projects({ projects, skills }) {
 
               return (
                 <Flipbox
+                  key={project._id}
+                  projectData={project}
+                  display={activFilter.length === 0 ? true : isDisplay}
+                />
+              )
+            })}
+          </div>
+        ) : (
+          <Loader />
+        )}
+
+        <p className="h1">
+          --------------------------------------------------------------------------------
+        </p> */}
+
+        {/* Projets avec les nuances de gris */}
+        {projects !== undefined ? (
+          <div className="grid">
+            {projects.map((project) => {
+              const isDisplay = project.skills.some((skill) =>
+                activFilter.includes(skill)
+              )
+
+              return (
+                <Cards
                   key={project._id}
                   projectData={project}
                   display={activFilter.length === 0 ? true : isDisplay}
