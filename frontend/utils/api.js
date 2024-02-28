@@ -110,3 +110,16 @@ export async function getHobbies() {
     console.error(error)
   }
 }
+
+/**
+ * Send contact form mail
+ *
+ */
+export async function postContact(formDataObj) {
+  try {
+    const response = await axios.post(API_ROUTES.POST_CONTACT, formDataObj)
+    return response.data
+  } catch (error) {
+    console.error(error)
+  }
+}

@@ -1,6 +1,8 @@
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import { APP_ROUTES } from '../../utils/constant.jsx'
 
+import 'bootstrap/js/dist/util'
+import 'bootstrap/js/dist/scrollspy'
 import Footer from '../components/Footer/index.jsx'
 
 const router = createBrowserRouter(APP_ROUTES)

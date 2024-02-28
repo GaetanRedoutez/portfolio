@@ -9,7 +9,7 @@ function Projects({ projects, skills }) {
   const [activFilter, setActivFilter] = useState([])
 
   return (
-    <div className="py-5" id="projects">
+    <div className="py-5" id="projects" data-spy>
       <div className="container">
         {skills !== undefined ? (
           <FilterBar

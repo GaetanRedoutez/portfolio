@@ -1,35 +1,98 @@
+import { useEffect, useState } from 'react'
+import { postContact } from '../../../utils/api'
+
 function Contact() {
-  const handleSubmit = (e) => {
+  const [contactResponse, setContactResponse] = useState(undefined)
+  const [displayMessage, setDisplayMessage] = useState('')
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    alert(
-      "Oups, je n'ai pas terminé 😭\n\nEn attendant, envoie-moi un email à redoutezgaetan@gmail.com"
-    )
+
+    const formData = new FormData(e.target)
+
+    const formDataObj = {}
+    formData.forEach((value, key) => (formDataObj[key] = value))
+    try {
+      const response = await postContact(formDataObj)
+
+      e.target.reset()
+
+      setContactResponse(response)
+    } catch (error) {
+      setContactResponse(false)
+      console.error(error)
+    }
   }
+
+  useEffect(() => {
+    if (contactResponse) {
+      setDisplayMessage('Votre message a été envoyé avec succès !')
+    } else {
+      setDisplayMessage(
+        "Une erreur est survenue lors de l'envoi de l'e-mail. Contacter : contact@gaetanredoutez.fr"
+      )
+    }
+  }, [contactResponse])
   return (
-    <div className="background-secondary py-5" id="contact">
+    <div className="background-secondary py-5" id="contact" data-spy>
       <div className="container">
         <h2 className="m-3">Contact</h2>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} id="contact-form">
           <div className="form-group m-3">
-            <label htmlFor="email">Adresse email</label>
+            <div className="d-flex flex-row justify-content-between">
+              <div className="container p-0 pe-1">
+                <label htmlFor="name">Nom</label>
+                <input
+                  type="text"
+                  className="form-control"
+                  id="name"
+                  name="name"
+                  placeholder="Votre nom"
+                  autoComplete="name"
+                  required
+                />
+              </div>
+
+              <div className="container p-0 ps-1">
+                <label htmlFor="email">Adresse email</label>
+                <input
+                  type="email"
+                  className="form-control"
+                  id="email"
+                  name="email"
+                  placeholder="Votre email"
+                  autoComplete="email"
+                  required
+                />
+              </div>
+            </div>
+          </div>
+          <div className="form-group m-3">
+            <label htmlFor="subject">Objet</label>
             <input
-              type="email"
+              type="text"
               className="form-control"
-              id="email"
-              name="email"
-              placeholder="Votre email"
-              autoComplete="email"
+              id="subject"
+              name="subject"
+              placeholder="Objet"
+              required
             />
           </div>
           <div className="form-group m-3">
-            <label htmlFor="text">Votre message</label>
+            <label htmlFor="message">Votre message</label>
             <textarea
               className="form-control"
-              id="text"
+              id="message"
+              name="message"
               placeholder="Votre message"
               rows={10}
+              required
             />
           </div>
+          {contactResponse !== undefined ? (
+            <div className="form-group mx-3 form-response border py-2 fs-5">
+              {displayMessage}
+            </div>
+          ) : null}
           <button type="submit" className="btn btn-primary m-3">
             Envoyer votre message
           </button>

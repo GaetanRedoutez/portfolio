@@ -1,7 +1,7 @@
 const http = require('http')
 const app = require('./app')
 
-const port = 8080
+const port = process.env.APP_PORT
 // Set the port for the Express app
 app.set('port', port)
 

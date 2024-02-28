@@ -6,7 +6,10 @@
   transition: all 0.5s ease;
 }
 
-.active {
-  border-radius: 3px;
-  background-color: $primary;
+.nav-link {
+  font-size: large;
+  &.active {
+    border-radius: 3px;
+    background-color: $primary;
+  }
 }

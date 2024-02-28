@@ -27,5 +27,7 @@ export const API_ROUTES = {
   GET_FORMATIONS: `${BASE_URL}/formation`,
   GET_LANGUAGES: `${BASE_URL}/language`,
   GET_SOFTSKILLS: `${BASE_URL}/soft-skill`,
-  GET_HOBBIES: `${BASE_URL}/hobby`
+  GET_HOBBIES: `${BASE_URL}/hobby`,
+
+  POST_CONTACT: `${BASE_URL}/contact`
 }

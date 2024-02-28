@@ -33,25 +33,33 @@ function Home() {
   }, [])
 
   return (
-    <div id="about">
+    <>
       <Header isHome={true} />
-      <About />
-      <div className="py-5 background-secondary" id="skills">
-        <Skills
-          title={'Compétences acquises'}
-          skills={skills}
-          state={'Acquis'}
-        />
-        <Skills
-          title={"En cours d'apprentissage"}
-          skills={skills}
-          state={'En cours'}
-        />
-        <Skills title={'Au planning'} skills={skills} state={'Prévu'} />
+      <div
+        data-bs-spy="scroll"
+        data-bs-target="#navbar"
+        data-bs-smooth-scroll="true"
+        className="scrollspy"
+        tabIndex="0"
+      >
+        <About />
+        <div className="py-5 background-secondary" id="skills" data-spy>
+          <Skills
+            title={'Compétences acquises'}
+            skills={skills}
+            state={'Acquis'}
+          />
+          <Skills
+            title={"En cours d'apprentissage"}
+            skills={skills}
+            state={'En cours'}
+          />
+          <Skills title={'Au planning'} skills={skills} state={'Prévu'} />
+        </div>
+        <Projects projects={projects} skills={skills} />
+        <Contact />
       </div>
-      <Projects projects={projects} skills={skills} />
-      <Contact />
-    </div>
+    </>
   )
 }
 
