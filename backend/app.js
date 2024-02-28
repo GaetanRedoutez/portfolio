@@ -32,20 +32,6 @@ async function dbConnection() {
 
 dbConnection().catch((err) => console.error(err))
 
-// Allow all request CORST is request method is OPTIONS
-app.use(function (req, res, next) {
-  if (req.method == 'OPTIONS') {
-    res.header('Access-Control-Allow-Headers', '*')
-    res.header(
-      'Access-Control-Allow-Methods',
-      'POST, GET, OPTIONS, PUT, PATCH, DELETE'
-    )
-    res.header('Access-Control-Allow-Origin', '*')
-    res.header('Access-Control-Allow-Credentials', true)
-    return res.sendStatus(200)
-  } else return next()
-})
-
 // Middleware for handling CORS headers
 app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', '*')
@@ -64,7 +50,7 @@ app.use('/api/v1/skills', skillRoute)
 app.use('/api/v1/projects', projectRoute)
 app.use('/api/v1', resumeRoute)
 
-app.use('/api/v1', contactRoute)
+// app.use('/api/v1', contactRoute)
 
 // Serve static images from the 'images' directory
 app.use('/images', express.static(path.join(__dirname, 'public/images')))
