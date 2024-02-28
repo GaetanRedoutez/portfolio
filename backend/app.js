@@ -12,7 +12,6 @@ const contactRoute = require('./src/routes/contact')
 
 const app = express()
 app.use(bodyParser.json())
-// app.use(bodyParser.urlencoded({ extended: true }))
 
 async function dbConnection() {
   // MongoDB connection string
@@ -50,7 +49,7 @@ app.use('/api/v1/skills', skillRoute)
 app.use('/api/v1/projects', projectRoute)
 app.use('/api/v1', resumeRoute)
 
-// app.use('/api/v1', contactRoute)
+app.use('/api/v1', contactRoute)
 
 // Serve static images from the 'images' directory
 app.use('/images', express.static(path.join(__dirname, 'public/images')))
