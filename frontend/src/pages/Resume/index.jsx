@@ -159,7 +159,6 @@ function Resume() {
                 height={200}
               />
             </a>
-            <p className="text-danger">Le QR code n{"'"}est pas fonctionnel</p>
           </div>
         </div>
       </div>
