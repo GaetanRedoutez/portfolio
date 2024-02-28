@@ -25,7 +25,7 @@ const contactForm = async (name, email, subject, message) => {
 
     // Envoi de l'e-mail
     const info = await transporter.sendMail(mailOptions)
-    console.log('Email envoyé: ' + info.response)
+    contactConfirm(name, email, subject, message)
     return true
   } catch (error) {
     console.error(
@@ -36,4 +36,26 @@ const contactForm = async (name, email, subject, message) => {
   }
 }
 
+const contactConfirm = async (name, email, subject, message) => {
+  try {
+    // Options de l'e-mail
+    const mailOptions = {
+      from: 'contact@gaetanredoutez.fr',
+      to: email,
+      subject: 'Confirmation de votre prise de contact : ' + subject,
+      text: `Bonjour,\n\nJe vous confirme la réception de votre message. Merci de m'avoir contacté.\n\nJe vais examiner votre message attentivement et je vous reviendrai vers vous sous 48h.\n\nBien cordialement,\nGaëtan Redoutez`
+    }
+    console.log(mailOptions)
+
+    // Envoi de l'e-mail
+    const info = await transporter.sendMail(mailOptions)
+    return true
+  } catch (error) {
+    console.error(
+      "Une erreur est survenue lors de l'envoi de l'e-mail :",
+      error
+    )
+    throw new Error("Une erreur est survenue lors de l'envoi de l'e-mail.")
+  }
+}
 module.exports = { contactForm }
