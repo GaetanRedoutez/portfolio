@@ -32,6 +32,20 @@ async function dbConnection() {
 
 dbConnection().catch((err) => console.error(err))
 
+// Allow all request CORST is request method is OPTIONS
+app.use(function (req, res, next) {
+  if (req.method == 'OPTIONS') {
+    res.header('Access-Control-Allow-Headers', '*')
+    res.header(
+      'Access-Control-Allow-Methods',
+      'POST, GET, OPTIONS, PUT, PATCH, DELETE'
+    )
+    res.header('Access-Control-Allow-Origin', '*')
+    res.header('Access-Control-Allow-Credentials', true)
+    return res.sendStatus(200)
+  } else return next()
+})
+
 // Middleware for handling CORS headers
 app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', '*')
