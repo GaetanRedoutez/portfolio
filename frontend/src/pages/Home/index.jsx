@@ -56,7 +56,7 @@ function Home() {
           />
           <Skills title={'Au planning'} skills={skills} state={'Prévu'} />
         </div> */}
-        {/* <Projects projects={projects} skills={skills} /> */}
+        <Projects projects={projects} skills={skills} />
         <Contact />
       </div>
     </>
