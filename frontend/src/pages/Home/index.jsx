@@ -43,7 +43,7 @@ function Home() {
         tabIndex="0"
       >
         <About />
-        {/* <div className="py-5 background-secondary" id="skills" data-spy>
+        <div className="py-5 background-secondary" id="skills" data-spy>
           <Skills
             title={'Compétences acquises'}
             skills={skills}
@@ -55,7 +55,7 @@ function Home() {
             state={'En cours'}
           />
           <Skills title={'Au planning'} skills={skills} state={'Prévu'} />
-        </div> */}
+        </div>
         <Projects projects={projects} skills={skills} />
         <Contact />
       </div>
