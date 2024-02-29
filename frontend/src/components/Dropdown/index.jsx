@@ -22,7 +22,7 @@ function Dropdown({ title, content }) {
 
   return (
     <>
-      <div className="grid mt-4 mx-5 dropdown">
+      <div className="grid mt-4 dropdown">
         <div className="g-col-1"></div>
         <div className="g-col-10 dropdown-collapse">
           <button
@@ -39,9 +39,9 @@ function Dropdown({ title, content }) {
         </div>
       </div>
       {isShow ? (
-        <div className="grid mt-2 mx-5 dropdown ">
+        <div className="grid mt-2 dropdown ">
           <div className="g-col-1"></div>
-          <ul className="g-col-10 dropdown-content justify">{content}</ul>
+          <ul className="g-col-10 dropdown-content p-0">{content}</ul>
         </div>
       ) : null}
     </>

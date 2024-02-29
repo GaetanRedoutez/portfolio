@@ -9,7 +9,7 @@ function About() {
         />
         {/* <div >
         </div> */}
-        <div className="mx-4 justify about-text">
+        <div className="mx-4  about-text">
           <p>
             Développeur web junior passionné et récemment formé, je suis à la
             recherche d{"'"}opportunités professionnelles pour mettre en

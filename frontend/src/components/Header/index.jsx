@@ -7,10 +7,10 @@ function Header() {
   useEffect(() => {
     const handleScroll = () => {
       const header = headerRef.current.getBoundingClientRect()
-      const offset = header.height
+      const offset = header.height - 10
 
       if (window.scrollY > header.top + offset) {
-        setSticky({ isSticky: true, offset: header.height })
+        setSticky({ isSticky: true, offset: header.height + 100 })
       } else {
         setSticky({ isSticky: false, offset: 0 })
       }
@@ -36,11 +36,8 @@ function Header() {
         ref={headerRef}
       >
         <div
-          className={`container header-content sticky-content 
-          ${
-            sticky.isSticky
-              ? 'justify-content-center'
-              : 'justify-content-between'
+          className={`container header-content sticky-content ${
+            sticky.isSticky ? 'header-sticky' : 'header-nosticky'
           }`}
         >
           {sticky.isSticky ? null : (
@@ -53,7 +50,7 @@ function Header() {
               <h1 className="header-content--link_text ">Gaëtan Redoutez</h1>
             </a>
           )}
-          <nav className="navbar navbar-expand" id="navbar">
+          <nav className="navbar" id="navbar">
             <div className="container">
               <div className="navbar-nav">
                 <a className="nav-link" href="/#about">

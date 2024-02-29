@@ -3,7 +3,32 @@
     display: flex;
     justify-content: center;
     border-radius: 5px;
-
     background-color: #f5e4b7;
+    font-size: 1.2rem;
+    @include respond-to('small') {
+      font-size: 1rem;
+    }
+  }
+}
+
+.contact {
+  &-info {
+    // d-flex flex-row justify-content-between
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    &--name {
+      padding: 0 1rem 0 0;
+    }
+    &--email {
+      padding: 0 0 0 1rem;
+    }
+    @include respond-to('small') {
+      display: block;
+      &--name,
+      &--email {
+        padding: 1rem 0 0 0;
+      }
+    }
   }
 }

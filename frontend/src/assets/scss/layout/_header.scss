@@ -5,8 +5,7 @@
   top: 0;
   width: 100%;
   transition: all 1s ease;
-  top: -100px;
-  transform: translateY(100px);
+  top: -10px;
   &-content {
     @include respond-to('small') {
       justify-content: center;
@@ -16,11 +15,15 @@
 
 .nav-link {
   font-size: 1.2rem;
+  padding-left: 1.2rem !important;
+  padding-right: 1.2rem !important;
   @include respond-to('small') {
     font-size: 0.8rem;
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
   }
   &.active {
-    border-radius: 3px;
+    border-radius: 5px;
     background-color: $primary;
     color: white !important;
   }
@@ -50,5 +53,21 @@
         }
       }
     }
+  }
+  &-sticky {
+    justify-content: center !important;
+  }
+  &-nosticky {
+    @include respond-to('small') {
+      justify-content: center !important;
+    }
+  }
+}
+
+.navbar {
+  &-nav {
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
   }
 }

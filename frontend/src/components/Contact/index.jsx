@@ -38,8 +38,8 @@ function Contact() {
         <h2 className="m-3">Contact</h2>
         <form onSubmit={handleSubmit} id="contact-form">
           <div className="form-group m-3">
-            <div className="d-flex flex-row justify-content-between">
-              <div className="container p-0 pe-1">
+            <div className="contact-info">
+              <div className="container contact-info--name">
                 <label htmlFor="name">Nom</label>
                 <input
                   type="text"
@@ -52,7 +52,7 @@ function Contact() {
                 />
               </div>
 
-              <div className="container p-0 ps-1">
+              <div className="container contact-info--email">
                 <label htmlFor="email">Adresse email</label>
                 <input
                   type="email"
@@ -89,7 +89,7 @@ function Contact() {
             />
           </div>
           {contactResponse !== undefined ? (
-            <div className="form-group mx-3 form-response border py-2 fs-5">
+            <div className="form-group mx-3 form-response border py-2">
               {displayMessage}
             </div>
           ) : null}

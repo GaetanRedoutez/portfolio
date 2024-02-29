@@ -9,5 +9,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    &--item {
+      margin: 0 2rem 0 2rem;
+      @include respond-to('small') {
+        margin: 0 1rem 0 1rem;
+      }
+    }
+  }
+
+  &-text {
+    @include respond-to('small') {
+      font-size: 0.8rem;
+    }
   }
 }

@@ -9,6 +9,7 @@
   &-image {
     @include respond-to('small') {
       width: 60%;
+      margin-bottom: 1.5rem;
     }
   }
   &-text {
