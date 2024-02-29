@@ -40,6 +40,7 @@ function Home() {
         data-bs-target="#navbar"
         data-bs-smooth-scroll="true"
         className="scrollspy"
+        data-offset="100"
         tabIndex="0"
       >
         <About />

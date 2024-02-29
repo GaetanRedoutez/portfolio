@@ -1,12 +1,17 @@
 .sticky {
   position: sticky;
   text-align: center;
-  z-index: 10;
+  z-index: 1;
   top: 0;
   width: 100%;
   transition: all 1s ease;
   top: -100px;
   transform: translateY(100px);
+  &-content {
+    @include respond-to('small') {
+      justify-content: center;
+    }
+  }
 }
 
 .nav-link {
@@ -17,6 +22,7 @@
   &.active {
     border-radius: 3px;
     background-color: $primary;
+    color: white !important;
   }
 }
 
@@ -40,7 +46,7 @@
         font-size: 1.5rem;
         @include respond-to('small') {
           font-size: 1rem;
-          text-align: center;
+          justify-content: center;
         }
       }
     }

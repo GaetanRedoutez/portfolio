@@ -4,30 +4,20 @@ function Header() {
   const [sticky, setSticky] = useState({ isSticky: false, offset: 0 })
   const headerRef = useRef(null)
 
-  const modifyNavLink = () => {
-    const navLink = document.querySelectorAll('.nav-link')
-
-    navLink.forEach((link) => {
-      if (link.classList.contains('active')) {
-        link.classList.add('text-light')
-      } else {
-        link.classList.remove('text-light')
-      }
-    })
-  }
-
   useEffect(() => {
-    const handleScroll = (height, offset) => {
-      modifyNavLink()
-      if (window.scrollY > height + offset) {
-        setSticky({ isSticky: true, offset: height })
+    const handleScroll = () => {
+      const header = headerRef.current.getBoundingClientRect()
+      const offset = header.height
+
+      if (window.scrollY > header.top + offset) {
+        setSticky({ isSticky: true, offset: header.height })
       } else {
         setSticky({ isSticky: false, offset: 0 })
       }
     }
-    const header = headerRef.current.getBoundingClientRect()
+
     const handleScrollEvent = () => {
-      handleScroll(header.top, header.height - 10)
+      handleScroll()
     }
 
     window.addEventListener('scroll', handleScrollEvent)
@@ -35,7 +25,7 @@ function Header() {
     return () => {
       window.removeEventListener('scroll', handleScrollEvent)
     }
-  }, [])
+  }, [headerRef])
 
   return (
     <>
@@ -46,7 +36,7 @@ function Header() {
         ref={headerRef}
       >
         <div
-          className={`container header-content
+          className={`container header-content sticky-content 
           ${
             sticky.isSticky
               ? 'justify-content-center'

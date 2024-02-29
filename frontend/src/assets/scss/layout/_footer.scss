@@ -1,0 +1,13 @@
+.footer {
+  // d-flex justify-content-between flex-column align-items-center
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  &-icon {
+    // justify-content-center align-items-center
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

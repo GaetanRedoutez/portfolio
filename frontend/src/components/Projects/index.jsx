@@ -2,8 +2,8 @@ import PropTypes from 'prop-types'
 import { useState } from 'react'
 import FilterBar from '../FilterBar/index.jsx'
 // import Flipbox from '../Flipbox/index.jsx'
-import Loader from '../Loader/index.jsx'
 import Cards from '../Cards/index.jsx'
+import Loader from '../Loader/index.jsx'
 
 function Projects({ projects, skills }) {
   const [activFilter, setActivFilter] = useState([])

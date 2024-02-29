@@ -5,7 +5,6 @@ import { Tooltip } from 'react-tooltip'
 import Modal from 'react-modal'
 
 function Cards({ projectData, display }) {
-  const [isHover, setIsHover] = useState(false)
   const [modalIsOpen, setIsOpen] = useState(false)
 
   let subtitle
@@ -29,8 +28,7 @@ function Cards({ projectData, display }) {
   const background = {
     backgroundImage: `url(${imageUrl})`,
     backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    filter: isHover ? 'grayscale(0)' : 'grayscale(1)'
+    backgroundPosition: 'center'
   }
 
   const fullClassName = `cards text-center  ${display ? '' : 'display-none'}`
@@ -57,8 +55,6 @@ function Cards({ projectData, display }) {
         className={fullClassName}
         data-tooltip-id="project-tooltip"
         data-tooltip-content="Cliquer pour voir les détails"
-        onMouseEnter={() => setIsHover(true)}
-        onMouseLeave={() => setIsHover(false)}
         onClick={openModal}
       >
         {/* <div className="cards-title p-0">
