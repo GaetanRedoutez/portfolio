@@ -44,7 +44,7 @@ function Projects({ projects, skills }) {
         )} */}
         {/* Projets avec les nuances de gris */}
         {projects !== undefined ? (
-          <div className="grid">
+          <div className="projects">
             {projects.map((project) => {
               const isDisplay = project.skills.some((skill) =>
                 activFilter.includes(skill)

@@ -37,31 +37,33 @@ function Header() {
     }
   }, [])
 
-  const classNameHeader = `container d-flex flex-row p-2 ${
-    sticky.isSticky ? 'justify-content-center' : 'justify-content-between'
-  }`
-
   return (
     <>
       <header
-        className={`bg-body-tertiary navbar ${sticky.isSticky ? 'sticky' : ''}`}
+        className={`bg-body-tertiary navbar ${
+          sticky.isSticky ? 'sticky' : ''
+        } header`}
         ref={headerRef}
       >
-        <div className={classNameHeader}>
+        <div
+          className={`container header-content
+          ${
+            sticky.isSticky
+              ? 'justify-content-center'
+              : 'justify-content-between'
+          }`}
+        >
           {sticky.isSticky ? null : (
-            <a
-              href="/"
-              className=" nav-link d-flex flex-row justify-content-between align-items-center home-link"
-            >
+            <a href="/" className="nav-link header-content--link">
               <img
                 src="assets\images\logo\logo.png"
                 alt="Logo Gaetan Redoutez"
                 width={55}
               />
-              <h1 className="h5 m-0 mx-2 ">Gaëtan Redoutez</h1>
+              <h1 className="header-content--link_text ">Gaëtan Redoutez</h1>
             </a>
           )}
-          <nav className="navbar navbar-expand-lg " id="navbar">
+          <nav className="navbar navbar-expand" id="navbar">
             <div className="container">
               <div className="navbar-nav">
                 <a className="nav-link" href="/#about">

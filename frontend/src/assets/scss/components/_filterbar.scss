@@ -1,0 +1,14 @@
+.filterbar {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 2rem;
+  @include respond-to('small') {
+    margin: 1rem;
+  }
+  &-btn {
+    width: 100px;
+    margin: 0.5rem;
+  }
+}

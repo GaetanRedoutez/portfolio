@@ -9407,18 +9407,57 @@ ul {
 
 .sticky {
   position: sticky;
+  text-align: center;
   z-index: 10;
   top: 0;
   width: 100%;
-  transition: all 0.5s ease;
+  transition: all 1s ease;
+  top: -100px;
+  transform: translateY(100px);
 }
 
 .nav-link {
-  font-size: large;
+  font-size: 1.2rem;
+}
+@media (max-width: 768px) {
+  .nav-link {
+    font-size: 0.8rem;
+  }
 }
 .nav-link.active {
   border-radius: 3px;
   background-color: #35437e;
+}
+
+.header {
+  width: 100%;
+}
+.header-content {
+  display: flex;
+}
+.header-content--link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 25%;
+}
+@media (max-width: 768px) {
+  .header-content--link {
+    margin-bottom: 1rem;
+    justify-content: center;
+    width: 100%;
+  }
+}
+.header-content--link_text {
+  margin-left: 1rem;
+  margin-bottom: 0;
+  font-size: 1.5rem;
+}
+@media (max-width: 768px) {
+  .header-content--link_text {
+    font-size: 1rem;
+    text-align: center;
+  }
 }
 
 .flipbox {
@@ -9483,17 +9522,22 @@ ul {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  flex-wrap: wrap;
 }
 .skillgrid-item {
-  width: 65px;
-  height: 65px;
   margin: 1rem;
 }
 .skillgrid-item--icon {
-  width: 65px;
-  height: 65px;
   -o-object-fit: contain;
      object-fit: contain;
+  width: 65px;
+  height: 65px;
+}
+@media (max-width: 768px) {
+  .skillgrid-item--icon {
+    width: 45px;
+    height: 45px;
+  }
 }
 
 .dropdown-collapse--btn {
@@ -9502,17 +9546,13 @@ ul {
 }
 
 .cards {
-  height: 180px;
+  height: 200px;
+  width: 40%;
+  min-width: 300px;
+  margin: 1rem;
   cursor: pointer;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 5px;
-}
-.cards-title {
-  height: 180px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
 }
 
 .modal-image {
@@ -9528,6 +9568,55 @@ ul {
   justify-content: center;
   border-radius: 5px;
   background-color: #f5e4b7;
+}
+
+.filterbar {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 2rem;
+}
+@media (max-width: 768px) {
+  .filterbar {
+    margin: 1rem;
+  }
+}
+.filterbar-btn {
+  width: 100px;
+  margin: 0.5rem;
+}
+
+.projects {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.about {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .about {
+    flex-direction: column;
+  }
+}
+@media (max-width: 768px) {
+  .about-image {
+    width: 60%;
+  }
+}
+.about-text {
+  font-size: 1.5rem;
+}
+@media (max-width: 768px) {
+  .about-text {
+    font-size: 1rem;
+  }
 }
 
 .visible {

@@ -33,9 +33,7 @@ function Cards({ projectData, display }) {
     filter: isHover ? 'grayscale(0)' : 'grayscale(1)'
   }
 
-  const fullClassName = `cards my-3 g-col-6 g-col-md-4 text-center  ${
-    display ? '' : 'display-none'
-  }`
+  const fullClassName = `cards text-center  ${display ? '' : 'display-none'}`
 
   const modalStyles = {
     content: {

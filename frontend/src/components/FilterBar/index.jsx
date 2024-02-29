@@ -25,10 +25,10 @@ function FilterBar({ activFilter, setActivFilter, filterList }) {
 
   return (
     <>
-      <div className="grid text-center my-5 mx-5" style={gridMaxCol}>
+      <div className="filterbar" style={gridMaxCol}>
         {filterList.map((value, key) => (
           <button
-            className={`g-col-1 btn ${
+            className={`filterbar-btn btn ${
               activFilter.includes(value) ? 'btn-primary' : 'btn-light '
             }`}
             key={Date.now() + key}

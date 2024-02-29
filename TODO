@@ -5,11 +5,14 @@ TODO du projet "Portfolio" | Début du projet le 12/02/2024
 
 Front:
   ☐ Gestion de la classe active dans la nav-bar sur défilement de la page
+  ☐ Commenter le code
+  ☐ Version mobile @started(24-02-29 11:12)
   
 
 Back: 
   ✔ Finir de passer les données sur database @done(25-02-27 14:10)
-  ☐ Gestion du formulaire de contact 
+  ✔ Gestion du formulaire de contact @done(24-02-29 11:11)
+  ☐ Mettre un buffer sur l'envoi des mails de confirmation
   ☐ Ajouter la gestion des images dans la base et les sauvegarder dessus
   
 Question Mentorat : 
@@ -18,8 +21,8 @@ Question Mentorat :
     ✔ Configurer https : https://certbot.eff.org/instructions?ws=nginx&os=ubuntufocal @done(24-02-27 15:45)
     ✔ Vérifier la configuration Nginx @done(24-02-27 15:45)
     ✔ Sécurité du serveur @done(24-02-27 15:45)
-    ☐ Table de routage : /etc/hosts -> voir capture d'écran
-    ☐ Envoie de mail
+    ✔ Table de routage : /etc/hosts -> voir capture d'écran @done(24-02-29 11:11)
+    ✔ Envoie de mail @done(24-02-29 11:11)
 
 Serveur :
     ☐ Voir pourquoi pas la page resume

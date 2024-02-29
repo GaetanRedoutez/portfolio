@@ -1,18 +1,20 @@
 function About() {
   return (
     <>
-      <div
-        className="container d-flex align-items-center justify-content-center py-5 "
-        id="about"
-      >
-        <div>
-          <img src="assets\images\photoprofil.png" width={351} alt="" />
-        </div>
-        <div className="fs-4 mx-4 justify">
+      <div className="container py-5 about" id="about">
+        <img
+          src="assets\images\photoprofil.png"
+          alt=""
+          className="about-image"
+        />
+        {/* <div >
+        </div> */}
+        <div className="mx-4 justify about-text">
           <p>
             Développeur web junior passionné et récemment formé, je suis à la
             recherche d{"'"}opportunités professionnelles pour mettre en
-            pratique les compétences acquises lors de ma reconversion. <br />
+            pratique les compétences acquises lors de ma reconversion.
+            <br />
             Dynamique et déterminé, je suis prêt à contribuer à des projets
             stimulants et à continuer à apprendre dans un environnement
             professionnel
