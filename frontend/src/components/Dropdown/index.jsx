@@ -26,7 +26,9 @@ function Dropdown({ title, content }) {
         <div className="g-col-1"></div>
         <div className="g-col-10 dropdown-collapse">
           <button
-            className="btn dropdown-collapse--btn d-flex align-items-center justify-content-between btn-light"
+            className={`btn dropdown-collapse--btn ${
+              isShow ? 'btn-secondary' : 'btn-light'
+            }`}
             onClick={handleClick}
           >
             <div>{title}</div>

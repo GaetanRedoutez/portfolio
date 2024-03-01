@@ -65,7 +65,12 @@ function Header() {
                 <a className="nav-link " href="/#contact">
                   Contact
                 </a>
-                <a className={`nav-link  `} href="/resume">
+                <a
+                  className={`nav-link ${
+                    window.location.href.includes('/resume') ? 'active' : null
+                  } `}
+                  href="/resume"
+                >
                   Mon CV
                 </a>
               </div>

@@ -5,7 +5,7 @@ function Footer() {
         <footer className="footer py-3 ">
           <ul className="footer-icon col-md-4 list-unstyled">
             <li className="footer-icon--item">
-              <a href="mailto:redoutezgaetan@gmail.com">
+              <a href="mailto:contact@gaetanredoutez.fr">
                 <img src="assets\images\icons\mail-svgrepo-com.png" alt="" />
               </a>
             </li>
