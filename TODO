@@ -4,16 +4,17 @@ TODO du projet "Portfolio" | Début du projet le 12/02/2024
 
 
 Front:
-  ☐ Gestion de la classe active dans la nav-bar sur défilement de la page
+  ✔ Gestion de la classe active dans la nav-bar sur défilement de la page @done(24-03-01 15:18)
   ☐ Commenter le code
-  ☐ Version mobile @started(24-02-29 11:12)
+  ✔ Version mobile @started(24-02-29 11:12) @done(24-03-01 15:18) @lasted(1d4h6m33s)
+  ☐ Transition sur apparition des contents dropdown sur /resume
   
 
 Back: 
   ✔ Finir de passer les données sur database @done(25-02-27 14:10)
   ✔ Gestion du formulaire de contact @done(24-02-29 11:11)
   ☐ Mettre un buffer sur l'envoi des mails de confirmation
-  ☐ Ajouter la gestion des images dans la base et les sauvegarder dessus
+  ☐ Ajouter la gestion des images dans la base
   
 Question Mentorat : 
   Linux : 
@@ -24,11 +25,6 @@ Question Mentorat :
     ✔ Table de routage : /etc/hosts -> voir capture d'écran @done(24-02-29 11:11)
     ✔ Envoie de mail @done(24-02-29 11:11)
 
+
 Serveur :
-    ☐ Voir pourquoi pas la page resume
-
-
-
-
-Mentorat: 
-  ☐ greyscale css pour les nuances de gris sur image
+  ✔ Voir pourquoi pas la page resume @done(24-03-01 15:19)
