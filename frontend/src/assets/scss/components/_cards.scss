@@ -6,7 +6,7 @@
   cursor: pointer;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 5px;
-  transition: filter 0.5s ease;
+  transition: filter 0.3s ease;
   filter: grayscale(1) brightness(0.75) blur(0.03rem);
   &:hover {
     filter: grayscale(0);

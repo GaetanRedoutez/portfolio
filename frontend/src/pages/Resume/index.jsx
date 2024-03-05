@@ -10,7 +10,13 @@ import {
 } from '../../../utils/api'
 import Header from '../../components/Header'
 
+/**
+ * Resume component to render the resume page
+ * Fetches data for hard skills, experiences, formations, soft skills, languages, and hobbies from API
+ * @returns {JSX.Element} - JSX element representing the resume page
+ */
 function Resume() {
+  // State variable to store resume data
   const [hardSkillData, setHardSkillData] = useState([])
   const [experiencesData, setExperiencesData] = useState([])
   const [formationsData, setFormationsData] = useState([])
@@ -18,7 +24,9 @@ function Resume() {
   const [softSkillData, setSoftSkillData] = useState([])
   const [hobbyData, setHobbyData] = useState([])
 
+  // Effect hook to fetch resume data
   useEffect(() => {
+    // Fetch hard skills data from API
     const fetchHardSkill = async () => {
       try {
         const response = await getHardSkills()
@@ -29,6 +37,7 @@ function Resume() {
     }
     fetchHardSkill()
 
+    // Fetch experiences data from API
     const fetchExperiences = async () => {
       try {
         const response = await getExperiences()
@@ -39,6 +48,7 @@ function Resume() {
     }
     fetchExperiences()
 
+    // Fetch formations data from API
     const fetchFormations = async () => {
       try {
         const response = await getFormations()
@@ -49,6 +59,7 @@ function Resume() {
     }
     fetchFormations()
 
+    // Fetch languages data from API
     const fetchLanguages = async () => {
       try {
         const response = await getLanguages()
@@ -59,6 +70,7 @@ function Resume() {
     }
     fetchLanguages()
 
+    // Fetch soft skills data from API
     const fetchSoftSkills = async () => {
       try {
         const response = await getSoftSkills()
@@ -69,6 +81,7 @@ function Resume() {
     }
     fetchSoftSkills()
 
+    // Fetch hobbies data from API
     const fetchHobby = async () => {
       try {
         const response = await getHobbies()
@@ -78,9 +91,11 @@ function Resume() {
       }
     }
     fetchHobby()
-  }, [])
+  }, []) // Runs only once after the component mounts
 
+  // Mapping over the array of hard skills data to generate JSX elements
   const hardSkill = hardSkillData.map((element, key) => (
+    // Each element is wrapped in a list item with a unique key
     <li key={Date.now() + key}>
       <div>
         <strong>{element.name}</strong> : {element.details}
@@ -88,7 +103,9 @@ function Resume() {
     </li>
   ))
 
+  // Mapping over the array of experiences data to generate JSX elements
   const experience = experiencesData.map((element, key) => (
+    // Each element is wrapped in a list item with a unique key
     <li key={Date.now() + key}>
       <div>
         <strong>{element.name}</strong> @ {element.society}
@@ -96,7 +113,9 @@ function Resume() {
     </li>
   ))
 
+  // Mapping over the array of formations data to generate JSX elements
   const formation = formationsData.map((element, key) => (
+    // Each element is wrapped in a list item with a unique key
     <li key={Date.now() + key}>
       <div>
         <strong>{element.name}</strong> @ {element.school}
@@ -104,7 +123,9 @@ function Resume() {
     </li>
   ))
 
+  // Mapping over the array of soft skills data to generate JSX elements
   const softSkill = softSkillData.map((element, key) => (
+    // Each element is wrapped in a list item with a unique key
     <li key={Date.now() + key}>
       <div>
         <strong>{element.name}</strong>
@@ -112,7 +133,9 @@ function Resume() {
     </li>
   ))
 
+  // Mapping over the array of languages data to generate JSX elements
   const langue = languagesData.map((element, key) => (
+    // Each element is wrapped in a list item with a unique key
     <li key={Date.now() + key}>
       <div>
         <strong>{element.name}</strong> - {element.level}
@@ -120,7 +143,9 @@ function Resume() {
     </li>
   ))
 
+  // Mapping over the array of hobbies data to generate JSX elements
   const hobby = hobbyData.map((element, key) => (
+    // Each element is wrapped in a list item with a unique key
     <li key={Date.now() + key}>
       <div>
         <strong>{element.name}</strong>
@@ -130,10 +155,15 @@ function Resume() {
 
   return (
     <>
-      <Header isHome={false} />
+      {/* Header component */}
+      <Header />
+
       <div>
         <div className="container">
+          {/* Title for the resume page */}
           <h2 className="d-flex justify-content-center m-5">Mon CV</h2>
+
+          {/* Dropdown components for displaying different sections */}
           <Dropdown title={'Hard Skill'} content={hardSkill} />
           <Dropdown title={'Experience'} content={experience} />
           <Dropdown title={'Formation'} content={formation} />
@@ -141,6 +171,8 @@ function Resume() {
           <Dropdown title={'Langue'} content={langue} />
           <Dropdown title={'Hobbies'} content={hobby} />
         </div>
+
+        {/* Link to download the resume */}
         <div className="container">
           <p className="h2 d-flex justify-content-center mt-5">
             Pour le télécharger c{"'"}est ici :{' '}

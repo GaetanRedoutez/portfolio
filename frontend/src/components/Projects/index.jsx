@@ -5,12 +5,23 @@ import FilterBar from '../FilterBar/index.jsx'
 import Cards from '../Cards/index.jsx'
 import Loader from '../Loader/index.jsx'
 
+/**
+ * Projects component to display project cards with filtering functionality
+ * @param {Object} props - The component props
+ * @param {Array} props.projects - The list of projects to display
+ * @param {Array} props.skills - The list of skills for filtering
+ * @returns {JSX.Element} - JSX element representing the projects section
+ */
 function Projects({ projects, skills }) {
+  // State variable to track active filters
   const [activFilter, setActivFilter] = useState([])
 
+  // Rendering the Projects component
   return (
     <div className="py-5" id="projects" data-spy>
       <div className="container">
+        {/* Filter bar */}
+        {/* Display FilterBar component if skills data is available, otherwise display Loader */}
         {skills !== undefined ? (
           <FilterBar
             filterList={skills
@@ -22,27 +33,9 @@ function Projects({ projects, skills }) {
         ) : (
           <Loader />
         )}
-        {/* Projets avec les flip box */}
-        {/* {projects !== undefined ? (
-          <div className="grid">
-            {projects.map((project) => {
-              const isDisplay = project.skills.some((skill) =>
-                activFilter.includes(skill)
-              )
 
-              return (
-                <Flipbox
-                  key={project._id}
-                  projectData={project}
-                  display={activFilter.length === 0 ? true : isDisplay}
-                />
-              )
-            })}
-          </div>
-        ) : (
-          <Loader />
-        )} */}
-        {/* Projets avec les nuances de gris */}
+        {/* Project cards */}
+        {/* Display project cards if projects data is available, otherwise display Loader */}
         {projects !== undefined ? (
           <div className="projects">
             {projects.map((project) => {

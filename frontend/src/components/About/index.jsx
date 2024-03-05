@@ -1,3 +1,7 @@
+/**
+ * About component for the home page
+ * @returns {JSX.Element}
+ */
 function About() {
   return (
     <>
@@ -7,8 +11,6 @@ function About() {
           alt=""
           className="about-image"
         />
-        {/* <div >
-        </div> */}
         <div className="mx-4  about-text">
           <p>
             Développeur web junior passionné et récemment formé, je suis à la
