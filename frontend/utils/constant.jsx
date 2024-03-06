@@ -2,6 +2,7 @@ import Resume from '../src/pages/Resume'
 import Error from '../src/pages/Error'
 import Home from '../src/pages/Home'
 
+// Define application routes
 export const APP_ROUTES = [
   {
     path: '/',
@@ -17,8 +18,10 @@ export const APP_ROUTES = [
   }
 ]
 
+// Retrieve base URL from environment variables
 const BASE_URL = import.meta.env.VITE_BASE_URL
 
+// Define API routes using the base URL
 export const API_ROUTES = {
   GET_SKILLS: `${BASE_URL}/skills`,
   GET_PROJECTS: `${BASE_URL}/projects`,

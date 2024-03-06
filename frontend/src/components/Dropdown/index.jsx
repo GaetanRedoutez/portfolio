@@ -2,26 +2,32 @@ import PropTypes from 'prop-types'
 import { useState } from 'react'
 
 /**
- * @param {Object} props
- * @param {string} props.title
- * @param {JSX.Element} props.content
- * @returns {JSX.Element}
+ * Dropdown component to display a collapsible content
+ * @param {Object} props - The component props
+ * @param {string} props.title - The title of the dropdown
+ * @param {JSX.Element} props.content - The content of the dropdown
+ * @returns {JSX.Element} - JSX element representing the dropdown
  */
 function Dropdown({ title, content }) {
+  // State variable to track whether dropdown content is shown or not
   const [isShow, setIsShow] = useState(false)
 
+  // Function to handle click event on the dropdown button
   const handleClick = () => {
     setIsShow(!isShow)
   }
 
+  // Style for the arrow icon based on the dropdown state
   const arrowStyle = isShow
     ? {
-        transform: 'rotate(180deg)'
+        transform: 'rotate(180deg)' // Rotate arrow down when content is shown
       }
     : null
 
+  // Rendering the dropdown component
   return (
     <>
+      {/* Dropdown button */}
       <div className="grid mt-4 dropdown">
         <div className="g-col-1"></div>
         <div className="g-col-10 dropdown-collapse">
@@ -40,6 +46,9 @@ function Dropdown({ title, content }) {
           </button>
         </div>
       </div>
+
+      {/* Dropdown content */}
+      {/* Displaying content only if isShow is true */}
       {isShow ? (
         <div className="grid mt-2 dropdown ">
           <div className="g-col-1"></div>
