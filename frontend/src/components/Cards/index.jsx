@@ -54,7 +54,7 @@ function Cards({ projectData, display }) {
         style={background}
         className={fullClassName}
         data-tooltip-id="project-tooltip"
-        data-tooltip-content="Cliquer pour voir les détails"
+        data-tooltip-content={projectData.name + ' - ' + projectData.type}
         onClick={openModal}
       >
         {/* <div className="cards-title p-0">
