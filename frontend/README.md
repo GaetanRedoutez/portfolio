@@ -1,8 +1,3 @@
-# React + Vite
+# Portfolio - frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Ce dossier contient l'application front-end de mon portfolio, réalisée en utilisant React avec le constructeur Vite.js. Vous trouverez ici le code responsable de l'interface utilisateur, des composants interactifs et de l'intégration de données.
