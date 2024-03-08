@@ -104,14 +104,14 @@ function Cards({ projectData, display }) {
           className="my-3 modal-image"
         />
 
-        <div>
+        <div className="modal-content">
           <h3 className="fs-4 my-3">Description</h3>
 
           <div className="fs-4 my-3">{projectData.description}</div>
 
           <h3 className="hidden m-0 p-0">Compétences</h3>
 
-          <div className="d-flex justify-content-around pt-3 border-top">
+          <div className="d-flex justify-content-around pt-3 border-top modal-content--skills">
             {projectData.skills.map((skill, key) => (
               <img
                 data-tooltip-id="skill-tooltip"

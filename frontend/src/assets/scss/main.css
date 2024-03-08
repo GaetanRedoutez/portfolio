@@ -9745,7 +9745,11 @@ ul {
   top: 0;
   width: 100%;
   transition: all 1s ease;
-  top: -10px;
+  transform: translateY(50px);
+  top: -50px;
+}
+.sticky-content {
+  transform: translateY(0); /* Centrer le contenu */
 }
 @media (max-width: 768px) {
   .sticky-content {
@@ -9951,8 +9955,10 @@ ul {
 }
 
 .cards {
+  -o-object-fit: cover;
+     object-fit: cover;
   height: 200px;
-  width: 40%;
+  width: 35%;
   min-width: 300px;
   margin: 1rem;
   cursor: pointer;
@@ -9971,6 +9977,9 @@ ul {
   width: 100%;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 5px;
+}
+.modal-content--skills {
+  flex-wrap: wrap;
 }
 
 .form-response {
@@ -10027,6 +10036,7 @@ ul {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  align-items: center;
   flex-wrap: wrap;
 }
 

@@ -5,11 +5,13 @@
   top: 0;
   width: 100%;
   transition: all 1s ease;
-  top: -10px;
+  transform: translateY(50px);
+  top: -50px;
   &-content {
     @include respond-to('small') {
       justify-content: center;
     }
+    transform: translateY(0); /* Centrer le contenu */
   }
 }
 
