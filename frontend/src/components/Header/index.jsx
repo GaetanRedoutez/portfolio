@@ -75,7 +75,12 @@ function Header() {
             <div className="container">
               <div className="navbar-nav">
                 {/* Navigation links */}
-                <a className="nav-link" href="/#about">
+                <a
+                  className={`nav-link ${
+                    window.location.href.includes('/resume') ? null : 'active'
+                  } `}
+                  href="/#about"
+                >
                   À propos
                 </a>
                 <a className="nav-link " href="/#skills">

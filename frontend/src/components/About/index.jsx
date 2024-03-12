@@ -5,24 +5,28 @@
 function About() {
   return (
     <>
-      <div className="container py-5 about" id="about">
+      <section className="container py-5 about" id="about">
         <img
           src="assets\images\photoprofil.png"
           alt=""
           className="about-image"
         />
-        <div className="mx-4  about-text">
+        <article className="mx-4 about-text">
           <p>
             Développeur web junior passionné et récemment formé, je suis à la
-            recherche d{"'"}opportunités professionnelles pour mettre en
-            pratique les compétences acquises lors de ma reconversion.
+            recherche d&apos;opportunités pour mettre en pratique les
+            compétences acquises lors de ma reconversion.
+            <br />
+            Mon expérience de programmation en automatisme démontre ma capacité
+            à raisonner de manière logique, ce qui constitue un atout dans le
+            développement web.
             <br />
             Dynamique et déterminé, je suis prêt à contribuer à des projets
-            stimulants et à continuer à apprendre dans un environnement
-            professionnel
+            stimulants et à continuer d&apos;enrichir mes connaissances dans un
+            environnement professionnel.
           </p>
-        </div>
-      </div>
+        </article>
+      </section>
     </>
   )
 }

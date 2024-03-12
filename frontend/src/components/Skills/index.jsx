@@ -33,7 +33,7 @@ function Skills({ title, skills, state }) {
     <>
       {/* Display loader if skills data is not available */}
       {skills !== undefined ? (
-        <div className="container">
+        <article className="container">
           {/* Display title if provided */}
           {title !== '' ? (
             <h2 className="mt-5 d-flex justify-content-center align-items-center">
@@ -63,7 +63,7 @@ function Skills({ title, skills, state }) {
               </div>
             ))}
           </div>
-        </div>
+        </article>
       ) : (
         <Loader /> // Display loader while skills data is loading
       )}

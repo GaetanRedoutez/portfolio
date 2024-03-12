@@ -51,7 +51,7 @@ function Contact() {
   }, [contactResponse])
 
   return (
-    <div className="background-secondary py-5" id="contact" data-spy>
+    <section className="background-secondary py-5" id="contact">
       <div className="container">
         <h2 className="m-3">Contact</h2>
 
@@ -128,7 +128,7 @@ function Contact() {
           </button>
         </form>
       </div>
-    </div>
+    </section>
   )
 }
 

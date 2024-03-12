@@ -18,7 +18,7 @@ function Projects({ projects, skills }) {
 
   // Rendering the Projects component
   return (
-    <div className="py-5" id="projects" data-spy>
+    <section className="py-5" id="projects">
       <div className="container">
         {/* Filter bar */}
         {/* Display FilterBar component if skills data is available, otherwise display Loader */}
@@ -56,7 +56,7 @@ function Projects({ projects, skills }) {
           <Loader />
         )}
       </div>
-    </div>
+    </section>
   )
 }
 

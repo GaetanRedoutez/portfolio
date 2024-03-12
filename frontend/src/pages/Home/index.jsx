@@ -1,10 +1,13 @@
 import { useEffect, useState } from 'react'
 import { getProjects, getSkills } from '../../../utils/api'
+
 import About from '../../components/About'
 import Contact from '../../components/Contact'
 import Projects from '../../components/Projects'
 import Skills from '../../components/Skills'
 import Header from '../../components/Header'
+
+import scrollSpy from '../../../utils/scrollSpy'
 
 /**
  * Home component to render the home page
@@ -42,47 +45,41 @@ function Home() {
     fetchProjects()
   }, []) // Runs only once after the component mounts
 
+  scrollSpy()
+
   return (
     <>
       {/* Header component */}
       <Header isHome={true} />
-      <div
-        data-bs-spy="scroll"
-        data-bs-target="#navbar"
-        data-bs-smooth-scroll="true"
-        className="scrollspy"
-        data-offset="100"
-        tabIndex="0"
-      >
-        {/* About section */}
-        <About />
 
-        {/* Skills section */}
-        <div className="py-5 background-secondary" id="skills" data-spy>
-          {/* Skills acquired */}
-          <Skills
-            title={'Compétences acquises'}
-            skills={skills}
-            state={'Acquis'}
-          />
+      {/* About section */}
+      <About />
 
-          {/* Skills in progress */}
-          <Skills
-            title={"En cours d'apprentissage"}
-            skills={skills}
-            state={'En cours'}
-          />
+      {/* Skills section */}
+      <section className="py-5 background-secondary" id="skills">
+        {/* Skills acquired */}
+        <Skills
+          title={'Compétences acquises'}
+          skills={skills}
+          state={'Acquis'}
+        />
 
-          {/* Skills planned */}
-          <Skills title={'Au planning'} skills={skills} state={'Prévu'} />
-        </div>
+        {/* Skills in progress */}
+        <Skills
+          title={"En cours d'apprentissage"}
+          skills={skills}
+          state={'En cours'}
+        />
 
-        {/* Projects section */}
-        <Projects projects={projects} skills={skills} />
+        {/* Skills planned */}
+        <Skills title={'Au planning'} skills={skills} state={'Prévu'} />
+      </section>
 
-        {/* Contact section */}
-        <Contact />
-      </div>
+      {/* Projects section */}
+      <Projects projects={projects} skills={skills} />
+
+      {/* Contact section */}
+      <Contact />
     </>
   )
 }
