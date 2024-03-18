@@ -12,7 +12,10 @@ function Footer() {
             {/* Email link */}
             <li className="footer-icon--item">
               <a href="mailto:contact@gaetanredoutez.fr">
-                <img src="assets\images\icons\mail-svgrepo-com.png" alt="" />
+                <img
+                  src="assets\images\icons\mail-svgrepo-com.png"
+                  alt="Mail Logo"
+                />
               </a>
             </li>
 
@@ -23,7 +26,10 @@ function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img src="assets\images\icons\icons8-github.png" alt="" />
+                <img
+                  src="assets\images\icons\icons8-github.png"
+                  alt="Github Link"
+                />
               </a>
             </li>
 
@@ -34,7 +40,10 @@ function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img src="assets\images\icons\icons8-linkedin.png" alt="" />
+                <img
+                  src="assets\images\icons\icons8-linkedin.png"
+                  alt="LinkedIn Link"
+                />
               </a>
             </li>
           </ul>

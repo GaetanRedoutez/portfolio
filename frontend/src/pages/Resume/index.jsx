@@ -186,9 +186,9 @@ function Resume() {
             >
               <img
                 src="assets/images/qrcode.png"
-                alt=""
-                width={200}
-                height={200}
+                alt="Télécharger mon CV"
+                width="200"
+                height="200"
               />
             </a>
           </div>
