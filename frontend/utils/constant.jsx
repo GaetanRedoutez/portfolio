@@ -1,6 +1,7 @@
 import Resume from '../src/pages/Resume'
 import Error from '../src/pages/Error'
 import Home from '../src/pages/Home'
+import Admin from '../src/pages/Admin'
 
 // Define application routes
 export const APP_ROUTES = [
@@ -11,6 +12,10 @@ export const APP_ROUTES = [
   {
     path: '/resume',
     element: <Resume />
+  },
+  {
+    path: '/admin',
+    element: <Admin />
   },
   {
     path: '*',
