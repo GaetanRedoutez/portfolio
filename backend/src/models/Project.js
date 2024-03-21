@@ -15,3 +15,5 @@ const projectSchema = new Schema({
 })
 
 module.exports = mongoose.model('Project', projectSchema)
+
+//TODO Ajout de l'url de l'image du skill avec une gestion multer et resize image
